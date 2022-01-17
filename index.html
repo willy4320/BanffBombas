@@ -703,9 +703,10 @@
         font-size: 20px;
         font-weight: bold;
         color: #50626e;
-        padding-top: 50px;
         text-align: left;
-        padding-left: 20px;
+
+        
+        padding-left: 20px;/*Willy Banff: padding for adjustmento on "Menú"*/
       }
       .myfooter {
         background-color: #ff7900;
@@ -733,27 +734,27 @@
 
 
       .myfooter table tr td ul {
-        list-style-type: none;
+
+
+        list-style-type: none;/*Willy Banff: Change disc style to none*/
         text-align: left;
       }
 
       /*pantalla grande*/
       @media only screen and (min-width: 1024px) {
-        .myfooter table tr td .centrar {
-          display: none;
-        }
+        
       }
 
       /*pantalla pequeña*/
       @media only screen and (max-width: 1024px) {
         footer#gkFooter table tr .contacto2 {
-          display: none;
+          display: none; /*Willy Banff: Display none on contacts bellow the footer*/
         }
 
         .myfooter table tr td .menu2{
-          padding-top: 10px;
+          padding-top: 10px; /*Willy Banff: padding on "Menú" from the footer*/
         }
-        .myfooter table tr td .contactoh3 {
+        .myfooter table tr td .contactoh3 {/*Willy Banff: Changes on "Contactos" from the footer*/
           text-align: center;
           padding-right: 50px;
           padding-top: 0px;
@@ -783,19 +784,19 @@
       }
       html body .jj_sl_navigation .jj_sl_custom1 a {
         background-color: #3acf22;
-        border-radius: 10px;
+        border-radius: 10px;/*Willy Banff: Rounded border for Cellphone*/
       }
       html body .jj_sl_navigation .jj_sl_custom2 a {
         background-color: #378137;
-        border-radius: 10px;
+        border-radius: 10px;/*Willy Banff: Rounded border for WhatsApp*/
       }
       html body .jj_sl_navigation .jj_sl_custom3 a {
         background-color: #3b5998;
-        border-radius: 10px;
+        border-radius: 10px;/*Willy Banff: Rounded border for Facebook*/
       }
       html body .jj_sl_navigation .jj_sl_custom4 a {
         background-color: #4f93b3;
-        border-radius: 10px;
+        border-radius: 10px;/*Willy Banff: Rounded border for LinkedIn*/
       }
       html body .jj_sl_navigation .jj_sprite_custom.jj_custom1 {
         background-image: url(https://www.banffbombas.cl/images/tele1.png);
@@ -1025,7 +1026,7 @@
       @media only screen and (max-width: 768px) {
         html body #gkMobileMenu {
           float: right;
-          top: -20px;
+          top: -20px; /*Willy Banff: Adjust Burguer button a little more up*/
         }
         html body table.parrafos tr td {
           width: 90%;
@@ -2582,6 +2583,30 @@
           </table>
         </div>
         
+        <!-- Willy Banff: This section is alreary on "Quienes Somos"
+
+
+        <h1 class="miseccion5">Características que nos distinguen</h1>
+        <div class="seccion5">
+          <table class="newcuadros">
+          <tbody><tr><td><div>
+          <h4>Experiencia y Conocimiento</h4>
+          <h5>Nos distinguimos por nuestro equipo con experiencia en el área industrial y con un alto grado de capacitación, lo que nos permite recomendarle la solución óptima para su proceso.</h5>
+          </div>
+          </td>
+          <td><div>
+          <h4>Empatía</h4>
+          <h5>Nos ponemos en el lugar de nuestros clientes, lo que nos da la capacidad de entregar una solución que atiende a la verdadera problemática que los aqueja.</h5>
+          </div>
+          </td>
+          <td><div>
+          <h4>Compromiso</h4>
+          <h5>Nos comprometemos con nuestros clientes, ofreciendo una atención integral a sus problemáticas, asesorándolos en la toma de decisiones que respectan a los equipos de bombeo.</h5>
+          </div>
+          </td>
+          </tr></tbody></table>
+        </div>-->
+
       <div id="gkPageContent">
         <div class="mifondo">
           <section id="gkContent" class="gkPage">
