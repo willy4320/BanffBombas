@@ -26,6 +26,7 @@
       Triple Tornillo Alfa Laval | Mantención Bombas | Equipo de desinfección |
       Equipo de sanitización | Sanitización
     </title>
+
     <link
       href="/index.php?format=feed&amp;type=rss"
       rel="alternate"
@@ -354,16 +355,21 @@
       }
       html body #gkHeaderNav {
         padding: 0px 0 0 0;
+        
       }
       html body #gkLogo img {
         height: 60px;
         width: auto;
         margin-top: 20px;
       }
+
+      .nav-colored { background-color:#000; }
+      .nav-transparent { background-color:transparent;}
       html body div#gkHeaderNav {
         background: none;
         box-shadow: none;
         text-align: center;
+        z-index: 9999;
       }
       html body #gkHeaderNav .gkPage {
         display: inline-block;
@@ -1044,15 +1050,21 @@
           z-index: 9999;
         }
 
-        html body .nav-burguer{
-          height: 60px;
-          background-color: #333;
-          opacity: 30%;
-          position: fixed;
-          z-index: 999;
-          top: 0;
-          width: 100%;
-        }
+
+        /*
+         .nav-colored { background-color:#000; }
+        .nav-transparent { background-color:transparent;}
+          html body #nav-burguer{
+            height: 60px;
+            background-color: #333;
+            opacity: 50%;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            width: 100%;
+          }
+        */
+       
 
         html body table.parrafos tr td {
           width: 90%;
@@ -1839,7 +1851,7 @@
         </div>
       </div>
 
-      <div class="nav-burguer"></div>
+   
       
       <div id="slider">
         <!-- BEGIN: Vinaora Nivo Slider >> http://vinaora.com/ -->
