@@ -1567,9 +1567,15 @@
 
               }
 
+              html body .burguerBlanco{
+                color: #fff;
+                transition: 0.3s;
+              }
+
               html body .barra-burguer_visible {
                 left: 0%;
               }
+              
 
 
               html body .burguer {
@@ -3409,32 +3415,37 @@
       const navToggle = document.querySelector(".burguer")
       const navMenu = document.querySelector(".nav-menu")
       const barraBurguer = document.querySelector(".barra-burguer")
+      const colorBurguer = document.querySelector(".burguer")
 
       window.onscroll = function() {scrollFunction()};
 
       function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           barraBurguer.classList.add("barra-burguer_visible")
+          colorBurguer.classList.add("burguerBlanco")
+
         } else {
           barraBurguer.classList.remove("barra-burguer_visible")
+          colorBurguer.classList.remove("burguerBlanco")
         }
       }
+
       navToggle.addEventListener('click', ()=>{
         navMenu.classList.toggle("nav-menu_visible")
-
-
+        
+    
         if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
           barraBurguer.classList.toggle("barra-burguer_visible")
         }
-
-       
 
         if(navMenu.classList.contains("nav-menu_visible")){
             navToggle.setAttribute("arial-label", "Cerrar menú")
         }else{
             navToggle.setAttribute("arial-label", "Abrir menú")
         }
+        
       });
+     
     </script>
   </body>
 </html>
