@@ -1519,15 +1519,16 @@
               line-height: 60px;
               text-transform: uppercase;
               width: max-content;
+              
             }
 
-
-            
-
             html body .nav-menu select{
-              width: 65%;
-              font-size: 10px;
+              font-size: 13px;
+              margin: 0 10px;
               text-transform: uppercase;
+              background: transparent;
+              border: none;
+              color: #2ba6cb;
             }
 
             html body .nav-menu select option {
@@ -1630,11 +1631,12 @@
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://www.banffbombas.cl/">Inicio</a></li>
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/empresa">Quienes Somos</a></li>
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/productos">Productos</a></li>
-            
-            <li class="nav-menu-item"><a  class="nav-menu-link nav-link">Servicios</a></li>
 
             <li>
               <select onchange="window.location.href=this.value;">
+
+                <option value="#" selected="selected" style="display: none;">Servicios</option>
+
                 <option value="/index.php/servicio/reparacion-de-bombas-en-general">
                   — Reparación de Bombas en General
                 </option>
@@ -1659,17 +1661,48 @@
               </select>
             </li>
               
-            
-            
-
-              
-
-
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/clientes">Clientes</a></li>
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/noticias">Noticias</a></li>
-            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/contactos">Contacto</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/contacto">Contacto</a></li>
           </ul>
 
+          <!--burguer function-->
+          <script type="text/javascript">
+            const navToggle = document.querySelector(".burguer")
+            const navMenu = document.querySelector(".nav-menu")
+            const barraBurguer = document.querySelector(".barra-burguer")
+            const colorBurguer = document.querySelector(".burguer")
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                barraBurguer.classList.add("barra-burguer_visible")
+                colorBurguer.classList.add("burguerBlanco")
+
+              } else {
+                barraBurguer.classList.remove("barra-burguer_visible")
+                colorBurguer.classList.remove("burguerBlanco")
+                navMenu.classList.remove("nav-menu_visible")
+              }
+            }
+
+            navToggle.addEventListener('click', ()=>{
+              navMenu.classList.toggle("nav-menu_visible")
+          
+              if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                barraBurguer.classList.toggle("barra-burguer_visible")
+              }
+
+              if(navMenu.classList.contains("nav-menu_visible")){
+                  navToggle.setAttribute("arial-label", "Cerrar menú")
+              }else{
+                  navToggle.setAttribute("arial-label", "Abrir menú")
+              }
+              
+            });
+          
+          </script>
 
           
           
@@ -3410,42 +3443,6 @@
       </div>
     </div>
 
-    <!--burguer function-->
-    <script type="text/javascript">
-      const navToggle = document.querySelector(".burguer")
-      const navMenu = document.querySelector(".nav-menu")
-      const barraBurguer = document.querySelector(".barra-burguer")
-      const colorBurguer = document.querySelector(".burguer")
-
-      window.onscroll = function() {scrollFunction()};
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          barraBurguer.classList.add("barra-burguer_visible")
-          colorBurguer.classList.add("burguerBlanco")
-
-        } else {
-          barraBurguer.classList.remove("barra-burguer_visible")
-          colorBurguer.classList.remove("burguerBlanco")
-        }
-      }
-
-      navToggle.addEventListener('click', ()=>{
-        navMenu.classList.toggle("nav-menu_visible")
-        
     
-        if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-          barraBurguer.classList.toggle("barra-burguer_visible")
-        }
-
-        if(navMenu.classList.contains("nav-menu_visible")){
-            navToggle.setAttribute("arial-label", "Cerrar menú")
-        }else{
-            navToggle.setAttribute("arial-label", "Abrir menú")
-        }
-        
-      });
-     
-    </script>
   </body>
 </html>
