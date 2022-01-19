@@ -1482,7 +1482,166 @@
             </a>
           </h2>
 
+
+          
+
+
+          <style>
+            html body .burguer {
+              color: rgb(0, 0, 0);
+              background: none;
+              border: none;
+              font-size: 25px;
+              padding: 0 20px;
+              line-height: 55px;
+              cursor: pointer;
+
+              width: 20px;
+              float: right;
+              top: 14px; /*Willy Banff: Adjust Burguer button to left*/
+              left: 10px;
+              position: fixed;
+              z-index: 9999;
+            }
+
+            html body .nav-menu {
+              display: flex;
+              margin-left: 40px;
+              list-style: none;
+              z-index: 9999;
+              
+            }
+
+            html body .nav-menu-item {
+              font-size: 13px;
+              margin: 0 10px;
+              line-height: 60px;
+              text-transform: uppercase;
+              width: max-content;
+            }
+
+
+            
+
+            html body .nav-menu select{
+              width: 65%;
+              font-size: 10px;
+              text-transform: uppercase;
+            }
+
+            html body .nav-menu select option {
+              font-size: 10px;
+              margin: 0 10px;
+              line-height: 60px;
+              text-transform: uppercase;
+              width: max-content;
+            }
+
+            html body .nav-menu-link {
+              padding: 6px 8px;
+              border-radius: 5px;
+            }
+
+            html body .nav-menu-link:hover {
+              background-color: #744516;
+              transition: 0.5s;
+            }
+
+            @media only screen and (max-width: 768px){
+              html body .burguer {
+                display: block;
+              }
+
+              html body .nav-menu {
+                flex-direction: column;
+                align-items: left;
+                margin: 0px;
+                background-color: #333;
+                position: fixed;
+                top: 60px;
+                width: 50%;
+                height: 100%;
+                padding: 10px 0;
+
+                height: calc(100%-60px);
+                overflow-y: auto;
+
+                right: 100%;
+                transition: 0.3s;
+              }
+
+              html body .nav-menu_visible {
+                right: 50%;
+              }
+
+              html body .nav-menu-item {
+                line-height: 45px;
+              }
+
+              html body .nav-menu-link:hover {
+                background: none;
+                color: chocolate;
+              }
+            } 
+          </style>
+
+          <button class="burguer" aria-label="Abrir menú">
+            <i class="icon-reorder"></i>
+          </button>
+
+          <!--barra-navegacion-->
+          <ul class="nav-menu">
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://www.banffbombas.cl/">Inicio</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/empresa">Quienes Somos</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/productos">Productos</a></li>
+            
+            <li class="nav-menu-item"><a  class="nav-menu-link nav-link">Servicios</a></li>
+
+            <li>
+              <select onchange="window.location.href=this.value;">
+                <option value="/index.php/servicio/reparacion-de-bombas-en-general">
+                  — Reparación de Bombas en General
+                </option>
+                <option
+                  value="/index.php/servicio/ingenieria-basica-para-sistemas-de-bombeo-en-general"
+                >
+                  — Ingeniería Básica para Sistemas de Bombeo en General
+                </option>
+                <option
+                  value="/index.php/servicio/instalacion-de-sistemas-de-bombeo-en-general"
+                >
+                  — Instalación de Sistemas de Bombeo en General
+                </option>
+                <option
+                  value="/index.php/servicio/venta-de-bombas-centrifugas-y-sistemas-de-bombeo"
+                >
+                  — Venta de Bombas Centrifugas y Sistemas de Bombeo
+                </option>
+                <option value="/index.php/servicio/asesoria-tecnica-en-bombas">
+                  — Asesoría Técnica en Bombas
+                </option>
+              </select>
+            </li>
+              
+            
+            
+
+              
+
+
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/clientes">Clientes</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/noticias">Noticias</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/contactos">Contacto</a></li>
+          </ul>
+
+
+          
+          
+
+          
+          <!--
           <div id="gkMobileMenu">
+            
             <i class="icon-reorder"></i>
             <select onchange="window.location.href=this.value;">
               <option selected="selected" value="https://www.banffbombas.cl/">
@@ -1491,9 +1650,7 @@
               <option value="/index.php/empresa">Quienes Somos</option>
               <option value="/index.php/productos">Productos</option>
               <option value="#">Servicio</option>
-              <option
-                value="/index.php/servicio/reparacion-de-bombas-en-general"
-              >
+              <option value="/index.php/servicio/reparacion-de-bombas-en-general">
                 — Reparación de Bombas en General
               </option>
               <option
@@ -1519,7 +1676,7 @@
               <option value="/index.php/contacto">Contacto</option>
             </select>
           </div>
-
+          --> 
           <div id="gkMainMenu" class="gkMenuClassic">
             <nav id="gkExtraMenu" class="gkMenu">
               <ul class="gkmenu level0">
@@ -3216,5 +3373,21 @@
         ></iframe>
       </div>
     </div>
+
+    <!--burguer function-->
+    <script type="text/javascript">
+      const navToggle = document.querySelector(".burguer")
+      const navMenu = document.querySelector(".nav-menu")
+
+      navToggle.addEventListener('click', ()=>{
+        navMenu.classList.toggle("nav-menu_visible")
+        console.log("hola")
+        if(navMenu.classList.contains("nav-menu_visible")){
+            navToggle.setAttribute("arial-label", "Cerrar menú")
+        }else{
+            navToggle.setAttribute("arial-label", "Abrir menú")
+        }
+      });
+    </script>
   </body>
 </html>
