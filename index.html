@@ -1498,7 +1498,7 @@
               display: none;
 
               float: right;
-              top: 0px; /*Willy Banff: Adjust Burguer button to left*/
+              top: 5px; /*Willy Banff: Adjust Burguer button to left*/
               left: 0px;
               position: fixed;
               z-index: 9999;
@@ -1547,9 +1547,28 @@
               background-color: #744516;
               transition: 0.5s;
             }
-    
+            
+            html body .barra-burguer{
+              position: fixed;
+              width: 100%;
+              left: 0;
+              height: 65px;
+              background-color: #333;
+              z-index: 9999;
+            }
 
             @media only screen and (max-width: 1024px){
+
+              html body .barra-burguer{
+                left: 100%;
+                transition: 0.3s;
+
+              }
+
+              html body .barra-burguer_visible {
+                left: 0%;
+              }
+
               html body .burguer {
                 display: block;
               }
@@ -1588,9 +1607,14 @@
             } 
           </style>
 
-          <button class="burguer" aria-label="Abrir menú">
-            <i class="icon-reorder"></i>
-          </button>
+          <div class="barra-burguer">
+            <button class="burguer" aria-label="Abrir menú">
+           
+              <i class="icon-reorder"></i>
+              
+            </button>
+          </div>
+          
 
           <!--barra-navegacion-->
           <ul class="nav-menu">
@@ -3381,9 +3405,11 @@
     <script type="text/javascript">
       const navToggle = document.querySelector(".burguer")
       const navMenu = document.querySelector(".nav-menu")
+      const barraBurguer = document.querySelector(".barra-burguer")
 
       navToggle.addEventListener('click', ()=>{
         navMenu.classList.toggle("nav-menu_visible")
+        barraBurguer.classList.toggle("barra-burguer_visible")
 
         if(navMenu.classList.contains("nav-menu_visible")){
             navToggle.setAttribute("arial-label", "Cerrar menú")
