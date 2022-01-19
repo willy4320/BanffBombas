@@ -1569,6 +1569,7 @@
                 left: 0%;
               }
 
+
               html body .burguer {
                 display: block;
               }
@@ -3407,9 +3408,24 @@
       const navMenu = document.querySelector(".nav-menu")
       const barraBurguer = document.querySelector(".barra-burguer")
 
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          barraBurguer.classList.add("barra-burguer_visible")
+        } else {
+          barraBurguer.classList.remove("barra-burguer_visible")
+        }
+      }
       navToggle.addEventListener('click', ()=>{
         navMenu.classList.toggle("nav-menu_visible")
-        barraBurguer.classList.toggle("barra-burguer_visible")
+
+
+        if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+          barraBurguer.classList.toggle("barra-burguer_visible")
+        }
+
+       
 
         if(navMenu.classList.contains("nav-menu_visible")){
             navToggle.setAttribute("arial-label", "Cerrar menú")
