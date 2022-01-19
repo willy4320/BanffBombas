@@ -1495,11 +1495,11 @@
               padding: 0 20px;
               line-height: 55px;
               cursor: pointer;
+              display: none;
 
-              width: 20px;
               float: right;
-              top: 14px; /*Willy Banff: Adjust Burguer button to left*/
-              left: 10px;
+              top: 0px; /*Willy Banff: Adjust Burguer button to left*/
+              left: 0px;
               position: fixed;
               z-index: 9999;
             }
@@ -1509,6 +1509,7 @@
               margin-left: 40px;
               list-style: none;
               z-index: 9999;
+              display: none;
               
             }
 
@@ -1546,8 +1547,9 @@
               background-color: #744516;
               transition: 0.5s;
             }
+    
 
-            @media only screen and (max-width: 768px){
+            @media only screen and (max-width: 1024px){
               html body .burguer {
                 display: block;
               }
@@ -1562,6 +1564,7 @@
                 width: 50%;
                 height: 100%;
                 padding: 10px 0;
+                display: block;
 
                 height: calc(100%-60px);
                 overflow-y: auto;
@@ -3381,7 +3384,7 @@
 
       navToggle.addEventListener('click', ()=>{
         navMenu.classList.toggle("nav-menu_visible")
-        console.log("hola")
+
         if(navMenu.classList.contains("nav-menu_visible")){
             navToggle.setAttribute("arial-label", "Cerrar menú")
         }else{
