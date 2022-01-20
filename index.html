@@ -745,36 +745,22 @@
 
 
       .myfooter table tr td ul {
-
-
         list-style-type: none;/*Willy Banff: Change disc style to none*/
         text-align: left;
       }
 
-      /*pantalla grande*/
-      @media only screen and (min-width: 1024px) {
-        
-      }
+    
 
-      /*pantalla pequeña*/
+      /*Willy: pantalla pequeña*/
       @media only screen and (max-width: 1024px) {
 
-        .myfooter table tr td .centrar {
-          display: none;
-        } 
+     
 
         footer#gkFooter table tr .contacto2 {
           display: none; /*Willy Banff: Display none on contacts bellow the footer*/
         }
 
-        .myfooter table tr td .menu2{
-          padding-top: 10px; /*Willy Banff: padding on "Menú" from the footer*/
-        }
-        .myfooter table tr td .contactoh3 {/*Willy Banff: Changes on "Contactos" from the footer*/
-          text-align: center;
-          padding-right: 50px;
-          padding-top: 10 px;
-        }
+      
       }
 
       html body table {
@@ -1487,6 +1473,57 @@
 
 
           <style>
+
+            html body .barra-principal{
+              background-color:#275d69;
+              display: flex;
+              width: 100%;
+              height: 80px;
+              position: fixed;
+              justify-content: center;
+              left: 0;
+              z-index: 9999;
+              top: -100%;
+            }
+
+            html body .barra-principal .gkMenu > ul li div.childcontent{
+              background-color: #275d69;
+            }
+
+            html body .barra-principal .gkMenu > ul li div.childcontent a{
+              color: #000;
+            }
+
+            html body .barra-principal ul li a{
+              color: #000;
+            }
+
+            html body .barra-principal ul li a:hover{
+              color: #ec6c41;
+            }
+
+            html body .barra-principal .gkMenu .haschild:hover > a, .gkMenu li.haschild.active:hover > a{
+              color:#ec6c41;
+            }
+
+            html body .barra-principal .gkMenu > ul li div.childcontent li:hover > a, .gkMenu > ul li div.childcontent li:hover > a small {
+              color:#ec6c41;
+            }
+
+            html body .barra-principal .gkMenu > ul > li.active > a {
+              color: #ec6c41;
+            }
+
+
+            
+
+
+            html body .barra-principal_visible{
+              top: 0;
+              transition: 0.3s;
+            }
+
+
             html body .burguer {
               color: rgb(0, 0, 0);
               background: none;
@@ -1557,6 +1594,10 @@
             }
 
             @media only screen and (max-width: 1024px){
+
+              html body .barra-principal{
+                display: none;
+              }
 
               html body .barra-burguer{
                 display: block;
@@ -1665,51 +1706,7 @@
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/contacto">Contacto</a></li>
           </ul>
 
-          <!--burguer function-->
-          <script type="text/javascript">
-            const navToggle = document.querySelector(".burguer")
-            const navMenu = document.querySelector(".nav-menu")
-            const barraBurguer = document.querySelector(".barra-burguer")
-            const colorBurguer = document.querySelector(".burguer")
 
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                barraBurguer.classList.add("barra-burguer_visible")
-                colorBurguer.classList.add("burguerBlanco")
-
-              } else {
-                barraBurguer.classList.remove("barra-burguer_visible")
-                colorBurguer.classList.remove("burguerBlanco")
-                navMenu.classList.remove("nav-menu_visible")
-              }
-            }
-
-            navToggle.addEventListener('click', ()=>{
-              navMenu.classList.toggle("nav-menu_visible")
-          
-              if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-                barraBurguer.classList.toggle("barra-burguer_visible")
-              }
-
-              if(navMenu.classList.contains("nav-menu_visible")){
-                  navToggle.setAttribute("arial-label", "Cerrar menú")
-                  
-              }else{
-                  navToggle.setAttribute("arial-label", "Abrir menú")
-                  
-              }
-
-              if(navMenu.classList.contains("nav-menu_visible") || barraBurguer.classList.contains("barra-burguer_visible")){
-                colorBurguer.classList.add("burguerBlanco")
-              }else{
-                colorBurguer.classList.remove("burguerBlanco")
-              }
-              
-            });
-          
-          </script>
 
           
           
@@ -1753,6 +1750,327 @@
             </select>
           </div>
           --> 
+
+
+          <div class="barra-principal">
+            <nav id="gkExtraMenu" class="gkMenu">
+              <ul class="gkmenu level0">
+                <li class="first active">
+                  <a
+                    href="https://www.banffbombas.cl/"
+                    class="first active"
+                    id="menu101"
+                    title="Inicio"
+                    onmouseover=""
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/index.php/empresa"
+                    id="menu113"
+                    title="Quienes Somos"
+                    onmouseover=""
+                    >Quienes Somos</a
+                  >
+                </li>
+                <li class="haschild menudividido">
+                  <a
+                    href="/index.php/productos"
+                    class="haschild menudividido"
+                    id="menu114"
+                    title="Productos"
+                    onmouseover=""
+                    >Productos</a
+                  >
+                  <div class="childcontent">
+                    <div class="childcontent-inner">
+                      <div class="gkcol gkcol2 first">
+                        <ul class="gkmenu level1">
+                          <li class="first">
+                            <a
+                              href="/index.php/bombas-centrifugas"
+                              class="first"
+                              id="menu175"
+                              title="Bombas Centrífugas"
+                              onmouseover=""
+                              >Bombas Centrífugas</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-alta-presion"
+                              id="menu176"
+                              title="Bombas de Alta Presión"
+                              onmouseover=""
+                              >Bombas de Alta Presión</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-piston"
+                              id="menu177"
+                              title="Bombas de Pistón"
+                              onmouseover=""
+                              >Bombas de Pistón</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-piston-circunferencial"
+                              id="menu179"
+                              title="Bombas de Pistón Circunferencial"
+                              onmouseover=""
+                              >Bombas de Pistón Circunferencial</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-tambor"
+                              id="menu180"
+                              title="Bombas de Tambor"
+                              onmouseover=""
+                              >Bombas de Tambor</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bomba-dosificadora"
+                              id="menu181"
+                              title="Bombas Dosificadora"
+                              onmouseover=""
+                              >Bombas Dosificadora</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-dosificadoras-de-multicabezales"
+                              id="menu182"
+                              title="Bombas Dosificadoras Multicabezales"
+                              onmouseover=""
+                              >Bombas Dosificadoras Multicabezales</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/estabilizadores-supresores"
+                              id="menu183"
+                              title="Estabilizadores – Supresores"
+                              onmouseover=""
+                              >Estabilizadores – Supresores</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-neumaticas-de-doble-diafragma"
+                              id="menu184"
+                              title="Bombas Neumáticas de Doble Diafragma"
+                              onmouseover=""
+                              >Bombas Neumáticas de Doble Diafragma</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-tornillo-helicoidal-cavidad-progresiva"
+                              id="menu185"
+                              title="Bombas de Tornillo Helicoidal / Cavidad Progresiva"
+                              onmouseover=""
+                              >Bombas de Tornillo Helicoidal / Cavidad
+                              Progresiva</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gkcol gkcol2 last">
+                        <ul class="gkmenu level1">
+                          <li class="first">
+                            <a
+                              href="/index.php/motobombas-y-bombas-sumergibles"
+                              class="first"
+                              id="menu186"
+                              title="Motobombas Y Bombas Sumergibles"
+                              onmouseover=""
+                              >Motobombas Y Bombas Sumergibles</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-autocebantes"
+                              id="menu187"
+                              title="Bombas Autocebantes"
+                              onmouseover=""
+                              >Bombas Autocebantes</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-engranajes-internos"
+                              id="menu188"
+                              title="Bombas de Engranajes Internos"
+                              onmouseover=""
+                              >Bombas de Engranajes Internos</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-termoplasticas-de-procesos"
+                              id="menu189"
+                              title="Bombas Termoplásticas de Procesos"
+                              onmouseover=""
+                              >Bombas Termoplásticas de Procesos</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-peristalticas"
+                              id="menu190"
+                              title="Bombas Peristálticas"
+                              onmouseover=""
+                              >Bombas Peristálticas</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/torres-de-enfriamiento"
+                              id="menu191"
+                              title="Torres de Enfriamiento"
+                              onmouseover=""
+                              >Torres de Enfriamiento</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/equipo-de-sanitizacion"
+                              id="menu192"
+                              title="Equipo de Sanitización"
+                              onmouseover=""
+                              >Equipo de Sanitización</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/mangueras-mineras-para-concentrado-y-relave"
+                              id="menu203"
+                              title="Mangueras Mineras para Concentrado y Relave"
+                              onmouseover=""
+                              >Mangueras Mineras para Concentrado y Relave</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/sistemas-de-osmosis-inversa"
+                              id="menu210"
+                              title="Sistemas de Ósmosis Inversa"
+                              onmouseover=""
+                              >Sistemas de Ósmosis Inversa</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="haschild">
+                  <a
+                    href="#"
+                    class="haschild"
+                    id="menu115"
+                    title="Servicio"
+                    onmouseover=""
+                    >Servicio</a
+                  >
+                  <div class="childcontent">
+                    <div class="childcontent-inner">
+                      <div class="gkcol gkcol first">
+                        <ul class="gkmenu level1">
+                          <li class="first">
+                            <a
+                              href="/index.php/servicio/reparacion-de-bombas-en-general"
+                              class="first"
+                              id="menu196"
+                              title="Reparación de Bombas en General"
+                              onmouseover=""
+                              >Reparación de Bombas en General</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/servicio/ingenieria-basica-para-sistemas-de-bombeo-en-general"
+                              id="menu197"
+                              title="Ingeniería Básica para Sistemas de Bombeo en General"
+                              onmouseover=""
+                              >Ingeniería Básica para Sistemas de Bombeo en
+                              General</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/servicio/instalacion-de-sistemas-de-bombeo-en-general"
+                              id="menu198"
+                              title="Instalación de Sistemas de Bombeo en General"
+                              onmouseover=""
+                              >Instalación de Sistemas de Bombeo en General</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/servicio/venta-de-bombas-centrifugas-y-sistemas-de-bombeo"
+                              id="menu199"
+                              title="Venta de Bombas Centrifugas y Sistemas de Bombeo"
+                              onmouseover=""
+                              >Venta de Bombas Centrifugas y Sistemas de
+                              Bombeo</a
+                            >
+                          </li>
+                          <li class="last">
+                            <a
+                              href="/index.php/servicio/asesoria-tecnica-en-bombas"
+                              class="last"
+                              id="menu200"
+                              title="Asesoría Técnica en Bombas"
+                              onmouseover=""
+                              >Asesoría Técnica en Bombas</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="/index.php/clientes"
+                    id="menu116"
+                    title="Clientes"
+                    onmouseover=""
+                    >Clientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/index.php/noticias"
+                    id="menu117"
+                    title="Noticias"
+                    onmouseover=""
+                    >Noticias</a
+                  >
+                </li>
+                <li class="last">
+                  <a
+                    href="/index.php/contacto"
+                    class="last"
+                    id="menu118"
+                    title="Contacto"
+                    onmouseover=""
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+
+
           <div id="gkMainMenu" class="gkMenuClassic">
             <nav id="gkExtraMenu" class="gkMenu">
               <ul class="gkmenu level0">
@@ -3245,32 +3563,7 @@
               <td>
                 <img class="imagefooter" src="/images/footer12.png" alt="" />
               </td>
-              <td style="text-align: center">
-                <div class="centrar">
-                  <h3 class="menu2">Menú</h3>
-                  <ul class="nav menu mod-list">
-                    <li class="item-101 default current active">
-                      <a href="/index.php">Inicio</a>
-                    </li>
-                    <li class="item-113">
-                      <a href="/index.php/empresa">Quienes Somos</a>
-                    </li>
-                    <li class="item-114 parent">
-                      <a href="/index.php/productos">Productos</a>
-                    </li>
-                    <li class="item-115 parent"><a href="#">Servicio</a></li>
-                    <li class="item-116">
-                      <a href="/index.php/clientes">Clientes</a>
-                    </li>
-                    <li class="item-117">
-                      <a href="/index.php/noticias">Noticias</a>
-                    </li>
-                    <li class="item-118">
-                      <a href="/index.php/contacto">Contacto</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
+              
               <td>
                 <h3 class="contactoh3">Contacto</h3>
                 <div>
@@ -3454,6 +3747,55 @@
     src="https://kit.fontawesome.com/37be89b3d2.js"
     crossorigin="anonymous"
   ></script>
+
+  <!--Willy: functions-->
+  <script type="text/javascript">
+    const navToggle = document.querySelector(".burguer")
+    const navMenu = document.querySelector(".nav-menu")
+    const barraBurguer = document.querySelector(".barra-burguer")
+    const colorBurguer = document.querySelector(".burguer")
+    const barraPrincipal = document.querySelector(".barra-principal")
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        barraBurguer.classList.add("barra-burguer_visible")
+        colorBurguer.classList.add("burguerBlanco")
+        barraPrincipal.classList.add("barra-principal_visible")
+
+      } else {
+        barraBurguer.classList.remove("barra-burguer_visible")
+        colorBurguer.classList.remove("burguerBlanco")
+        navMenu.classList.remove("nav-menu_visible")
+        barraPrincipal.classList.remove("barra-principal_visible")
+      }
+    }
+
+    navToggle.addEventListener('click', ()=>{
+      navMenu.classList.toggle("nav-menu_visible")
+  
+      if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        barraBurguer.classList.toggle("barra-burguer_visible")
+      }
+
+      if(navMenu.classList.contains("nav-menu_visible")){
+          navToggle.setAttribute("arial-label", "Cerrar menú")
+          
+      }else{
+          navToggle.setAttribute("arial-label", "Abrir menú")
+          
+      }
+
+      if(navMenu.classList.contains("nav-menu_visible") || barraBurguer.classList.contains("barra-burguer_visible")){
+        colorBurguer.classList.add("burguerBlanco")
+      }else{
+        colorBurguer.classList.remove("burguerBlanco")
+      }
+      
+    });
+  
+  </script>
     
   </body>
 </html>
