@@ -376,23 +376,17 @@
         border-bottom: 1px solid #000;
         margin-bottom: 0px !important;
         padding-bottom: 20px;
-
-        
-
-
       }
       html body #gkMainMenu {
         float: right;
         padding: 0;
         clear: none;
-        
       }
       #gkMainMenu .gkMenu {
         display: block;
         margin: 0;
         position: relative;
         text-align: center;
-        
       }
       html body .gkMenu > ul > li {
         text-transform: none;
@@ -1562,23 +1556,7 @@
               z-index: 9999;
             }
 
-          
-
-
-
-            html body .gkPage_scroll{
-              display: flex;
-              position: fixed;
-              z-index: 9999;
-            }
-
-            html body .page_scroll{
-
-            }
-
             @media only screen and (max-width: 1024px){
-
-         
 
               html body .barra-burguer{
                 display: block;
@@ -1645,9 +1623,9 @@
               
             </button>
           </div>
+          
 
-        
-          <!--barra-navegacion burguer-->
+          <!--barra-navegacion-->
           <ul class="nav-menu">
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://www.banffbombas.cl/">Inicio</a></li>
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/empresa">Quienes Somos</a></li>
@@ -1693,7 +1671,6 @@
             const navMenu = document.querySelector(".nav-menu")
             const barraBurguer = document.querySelector(".barra-burguer")
             const colorBurguer = document.querySelector(".burguer")
-            const barraNavegacion = document.querySelector("gkHeaderNav")
 
             window.onscroll = function() {scrollFunction()};
 
@@ -1701,19 +1678,16 @@
               if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 barraBurguer.classList.add("barra-burguer_visible")
                 colorBurguer.classList.add("burguerBlanco")
-                barraNavegacion.classList.add("gkPage_scroll")
 
               } else {
                 barraBurguer.classList.remove("barra-burguer_visible")
                 colorBurguer.classList.remove("burguerBlanco")
                 navMenu.classList.remove("nav-menu_visible")
-                barraNavegacion.classList.remove("gkPage_scroll")
               }
             }
 
             navToggle.addEventListener('click', ()=>{
               navMenu.classList.toggle("nav-menu_visible")
-              barraNavegacion.classList.add("gkPage_scroll")
           
               if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
                 barraBurguer.classList.toggle("barra-burguer_visible")
