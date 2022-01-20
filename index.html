@@ -1474,6 +1474,7 @@
 
           <style>
 
+            /*Willy: barra principal*/
             html body .barra-principal{
               background-color:#275d69;
               display: flex;
@@ -1514,16 +1515,13 @@
               color: #ec6c41;
             }
 
-
-            
-
-
             html body .barra-principal_visible{
               top: 0;
               transition: 0.3s;
             }
 
 
+            /*Willy: menu burguer*/
             html body .burguer {
               color: rgb(0, 0, 0);
               background: none;
@@ -1593,12 +1591,20 @@
               z-index: 9999;
             }
 
+
+            html body .myfooter table tr td h3{
+              padding-top: 10%;
+            }
             @media only screen and (max-width: 1024px){
 
+
+              /*Willy: barra principal*/
               html body .barra-principal{
                 display: none;
               }
 
+
+              /*Willy: menu burguer*/
               html body .barra-burguer{
                 display: block;
                 left: 100%;
@@ -1615,7 +1621,6 @@
                 left: 0%;
               }
               
-
 
               html body .burguer {
                 display: block;
@@ -3563,7 +3568,8 @@
               <td>
                 <img class="imagefooter" src="/images/footer12.png" alt="" />
               </td>
-              
+              <td style="text-align:center;">
+              </td>
               <td>
                 <h3 class="contactoh3">Contacto</h3>
                 <div>
