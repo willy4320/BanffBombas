@@ -26,6 +26,8 @@
       Triple Tornillo Alfa Laval | Mantención Bombas | Equipo de desinfección |
       Equipo de sanitización | Sanitización
     </title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <link
       href="/index.php?format=feed&amp;type=rss"
@@ -1594,11 +1596,14 @@
             }
             
 
-            html body .myfooter table tr{
-              background-color: #333;
-            }
+           
             html body .myfooter table tr td h3{
               padding-top: 5%;
+            }
+
+            html body #gkFooter{
+              background-color: #50626e;
+              opacity: 100%;
             }
 
             
@@ -1691,9 +1696,9 @@
 
             <li class="nav-menu-item"><a class="nav-menu-link nav-link">
 
-              <select style="margin-left: -8px;" onchange="window.location.href=this.value;" >
+              <select id="selectId" style="margin-left: -8px;" onchange="window.location.href=this.value; reset()" >
                 
-                <option selected="selected" style="display: none;">Servicios</option>
+                <option id="servicios" selected="selected" style="display: none;">Servicios</option>
   
                 <option value="/index.php/servicio/reparacion-de-bombas-en-general">
                   — Reparación de Bombas en General
@@ -1718,6 +1723,17 @@
                 </option>
   
               </select>
+
+              
+              <script>
+                function reset(){
+                  document.getElementById("servicios").selected = true;
+
+                }
+              
+        
+              </script>
+
             </a></li>
             
     
@@ -3777,6 +3793,7 @@
 
   <!--Willy: functions-->
   <script type="text/javascript">
+
     const navToggle = document.querySelector(".burguer")
     const navMenu = document.querySelector(".nav-menu")
     const barraBurguer = document.querySelector(".barra-burguer")
