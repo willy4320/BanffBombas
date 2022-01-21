@@ -1592,9 +1592,11 @@
               background-color: #50626e;
               z-index: 9999;
             }
-
-
             
+
+            html body .myfooter table tr{
+              background-color: #333;
+            }
             html body .myfooter table tr td h3{
               padding-top: 5%;
             }
@@ -1649,6 +1651,8 @@
                 transition: 0.3s;
               }
 
+            
+
               html body .nav-menu_visible {
                 right: 55%;
               }
@@ -1684,33 +1688,38 @@
           
 
             <!---->
-            <select onchange="window.location.href=this.value;" >
+
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link">
+
+              <select style="margin-left: -8px;" onchange="window.location.href=this.value;" >
                 
-              <option selected="selected" style="display: none;">Servicios</option>
-
-              <option value="/index.php/servicio/reparacion-de-bombas-en-general">
-                — Reparación de Bombas en General
-              </option>
-              <option
-                value="/index.php/servicio/ingenieria-basica-para-sistemas-de-bombeo-en-general"
-              >
-                — Ingeniería Básica para Sistemas de Bombeo en General
-              </option>
-              <option
-                value="/index.php/servicio/instalacion-de-sistemas-de-bombeo-en-general"
-              >
-                — Instalación de Sistemas de Bombeo en General
-              </option>
-              <option
-                value="/index.php/servicio/venta-de-bombas-centrifugas-y-sistemas-de-bombeo"
-              >
-                — Venta de Bombas Centrifugas y Sistemas de Bombeo
-              </option>
-              <option value="/index.php/servicio/asesoria-tecnica-en-bombas">
-                — Asesoría Técnica en Bombas
-              </option>
-
-            </select>
+                <option selected="selected" style="display: none;">Servicios</option>
+  
+                <option value="/index.php/servicio/reparacion-de-bombas-en-general">
+                  — Reparación de Bombas en General
+                </option>
+                <option
+                  value="/index.php/servicio/ingenieria-basica-para-sistemas-de-bombeo-en-general"
+                >
+                  — Ingeniería Básica para Sistemas de Bombeo en General
+                </option>
+                <option
+                  value="/index.php/servicio/instalacion-de-sistemas-de-bombeo-en-general"
+                >
+                  — Instalación de Sistemas de Bombeo en General
+                </option>
+                <option
+                  value="/index.php/servicio/venta-de-bombas-centrifugas-y-sistemas-de-bombeo"
+                >
+                  — Venta de Bombas Centrifugas y Sistemas de Bombeo
+                </option>
+                <option value="/index.php/servicio/asesoria-tecnica-en-bombas">
+                  — Asesoría Técnica en Bombas
+                </option>
+  
+              </select>
+            </a></li>
+            
     
               
               
