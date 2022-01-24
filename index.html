@@ -413,7 +413,7 @@
       }
       html body .gkMenu > ul > li > a {
         font-size: 14px;
-        color: #FF8300;
+        color: rgb(255, 121, 0);
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -435,7 +435,7 @@
       }
       html body .gkMenu > ul > li > a {
         font-size: 14px;
-        color: #FF8300;
+        color: rgb(255, 121, 0);
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -496,7 +496,7 @@
       }
       div.seccion2 h5 {
         font-size: 24px;
-        color: #FF8300;
+        color: rgb(255, 121, 0);
         font-weight: bold;
       }
       div.seccion2 h4 {
@@ -540,7 +540,7 @@
       }
       table.losnumeros tr td table tr td span {
         font-size: 24px;
-        color: #FF8300;
+        color: rgb(255, 121, 0);
         font-weight: bold;
         text-transform: uppercase;
         padding-bottom: 8px;
@@ -597,7 +597,7 @@
         background-image: url(images/newfondo.png);
       }
       div.seccion5 table.newcuadros tr td div h4 {
-        background-color: #FF8300;
+        background-color: rgb(255, 121, 0);
         padding: 20px 10px;
         text-align: center;
         color: white;
@@ -688,7 +688,7 @@
         font-size: 0px;
       }
       .miiframe {
-        border: 5px solid #FF8300;
+        border: 5px solid rgb(255, 121, 0);
         border-radius: 10px;
       }
       #home .blog-featured header {
@@ -723,7 +723,7 @@
       }
 
       .myfooter {
-        background-color: #ff7900;
+        background-color: rgb(255, 121, 0); /*Pantone 151 naranja: rgb(255, 121, 0)*/
       }
 
       .myfooter table tr td ul li a {
@@ -1504,19 +1504,19 @@
             }
 
             html body .barra-principal ul li a:hover{
-              color: #FF8300;
+              color: rgb(255, 121, 0);
             }
 
             html body .barra-principal .gkMenu .haschild:hover > a, .gkMenu li.haschild.active:hover > a{
-              color:#FF8300;
+              color:rgb(255, 121, 0);
             }
 
             html body .barra-principal .gkMenu > ul li div.childcontent li:hover > a, .gkMenu > ul li div.childcontent li:hover > a small {
-              color:#FF8300;
+              color:rgb(255, 121, 0);
             }
 
             html body .barra-principal .gkMenu > ul > li.active > a {
-              color: #FF8300;
+              color: rgb(255, 121, 0);
             }
 
             html body .barra-principal_visible{
@@ -1583,7 +1583,7 @@
             }
 
             html body .nav-menu-link:hover {
-              background-color: #FF8300;
+              background-color: rgb(255, 121, 0);
               transition: 0.5s;
             }
             
@@ -1593,7 +1593,7 @@
               width: 100%;
               left: 0;
               top: -1;
-              height: 62px;
+              height: 61px;
               background-color: #425363;
               z-index: 9999;
             }
@@ -1633,6 +1633,11 @@
 
               html body .barra-burguer_visible {
                 left: 0%;
+              }
+
+              html body .barra-burguer_trasparente{
+                opacity: 80%;
+                transition: 0.3s;
               }
               
 
@@ -1675,7 +1680,7 @@
 
               html body .nav-menu-link:hover {
                 background: none;
-                color: #FF8300;
+                color: rgb(255, 121, 0);
               }
             } 
           </style>
@@ -3810,6 +3815,7 @@
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         barraBurguer.classList.add("barra-burguer_visible")
+        barraBurguer.classList.add("barra-burguer_trasparente")
         colorBurguer.classList.add("burguerBlanco")
         barraPrincipal.classList.add("barra-principal_visible")
 
@@ -3830,9 +3836,11 @@
 
       if(navMenu.classList.contains("nav-menu_visible")){
           navToggle.setAttribute("arial-label", "Cerrar menú")
+          barraBurguer.classList.remove("barra-burguer_trasparente")
           
       }else{
           navToggle.setAttribute("arial-label", "Abrir menú")
+          barraBurguer.classList.add("barra-burguer_trasparente")
           
       }
 
