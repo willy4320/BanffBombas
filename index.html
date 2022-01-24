@@ -1667,10 +1667,16 @@
               
 
             
-              /*colores*/
               html body .nav-menu_visible {
                 left: 0%;
               }
+
+              html body .nav-menu_trasparente{
+                opacity: 80%;
+                transition: 0.3s;
+              }
+
+
 
            
 
@@ -3815,7 +3821,7 @@
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         barraBurguer.classList.add("barra-burguer_visible")
-        barraBurguer.classList.add("barra-burguer_trasparente")
+       
         colorBurguer.classList.add("burguerBlanco")
         barraPrincipal.classList.add("barra-principal_visible")
 
@@ -3825,6 +3831,10 @@
         navMenu.classList.remove("nav-menu_visible")
         barraPrincipal.classList.remove("barra-principal_visible")
       }
+    }
+
+    if(barraBurguer.classList.contains("barra-burguer_trasparente")){
+      navMenu.classList.add("nav-menu_trasparente")
     }
 
     navToggle.addEventListener('click', ()=>{
