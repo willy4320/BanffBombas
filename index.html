@@ -492,7 +492,9 @@
         background: #fff;
       }
       div.seccion2 {
-        padding-top: 100px;
+        padding-left: 20px;
+        padding-top: 40px;
+        background: #fbfbfd;
       }
       div.seccion2 h5 {
         font-size: 24px;
@@ -549,9 +551,11 @@
       .seccion3 img {
         max-width: 145px !important;
         margin: 20px 5px;
+        
       }
       div.seccion3 {
         padding-top: 100px;
+        
       }
       table.misvideos {
         width: 100% !important;
@@ -1044,7 +1048,9 @@
         
        
 
+     
         html body table.parrafos tr td {
+          
           width: 90%;
           float: left;
         }
@@ -1576,7 +1582,6 @@
             html body .nav-menu select option {
               font-size: 10px;
               text-transform: uppercase;
-              width: max-content;
             }
 
             html body .nav-menu-link {
@@ -1708,6 +1713,7 @@
           
 
             <!---->
+
 
             <li class="nav-menu-item"><a class="nav-menu-link nav-link">
 
@@ -3607,102 +3613,148 @@
           </table>
         </div>
       </div>
-      <div class="imagenboton">
-        <img src="/images/fondoboton1.png" alt="" style="width: 100%" />
-      </div>
+    </div>
+    <div>
+      <!--footerWilly-->
+      <style>
+        html body footer {
+          position: absolute; 
+          left: 0;
+          right: 0;
+          background: 	#f5f5f7;
+          height: auto;
+          width: 100%;
+          padding-top: 40px;
+          color: var(--footer-directory-title-color);
+        }
 
-      
-   
-      <div class="myfooter">
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <img class="imagefooter" src="images/banffFooter.png" alt="" />
-              </td>
-              <td style="text-align:center;">
-              </td>
-              <td>
-                <h3 class="contactoh3">Contacto</h3>
-                <div>
-                  <img
-                    src="/images/location.png"
-                    border="0"
-                    alt=""
-                    style="
-                      width: 25px;
-                      vertical-align: middle;
-                      margin-right: 5px;
-                      float: left;
-                    "
-                  />
-                </div>
-                <div
-                  style="
-                    line-height: 20px;
-                    color: #fff !important;
-                    font-size: 15px;
-                    font-weight: bold;
-                    padding: 5px;
-                  "
-                >
-                  General San Martín 10.500, Oficina A1, Colina, Santiago, Chile
-                </div>
-                <p>
-                  <img
-                    src="/images/phone.png"
-                    border="0"
-                    alt=""
-                  /><!--<a href="tel:224827100">2 2482 7100</a> - --><a
-                    href="tel:223926500"
-                    >2 2392 6500</a
-                  >
-                </p>
+        html body footer .footer-content {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
 
-                <!--<p><img src="/images/phone2.png" border="0" alt=""><a href="tel:223926504">2 2392 6504</a> - <a href="tel:223926505">2 2392 6505</a></p>
-<p><img src="/images/phone2.png" border="0" alt=""><a href="tel:223926506">2 2392 6506</a> - <a href="tel:223926507">2 2392 6507</a></p>
-<p><img src="/images/phone2.png" border="0" alt=""><a href="tel:223926508">2 2392 6508</a></p>-->
-                <p>
-                  <img src="/images/mail.png" border="0" alt="" /><a
-                    href="mailto:contacto.ventas@banffbombas.cl"
-                    >contacto.ventas@banffbombas.cl</a
-                  >
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        html body footer .footer-content h1 {
+          font-size: 1.5rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        html body footer .footer-content p {
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+          color: #6e6e73;
+        }
+
+
+        html body footer .footer-content .footer-info{
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          padding-left: 20px;
+          
+        }
+        html body footer .footer-content .footer-info h2{
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: left;
+          text-transform: capitalize;
+          line-height: 2rem;
+          padding:0 10px;
+        }
+
+        html body footer .footer-content .footer-info p{
+          max-width: 110px;
+          margin: 10px auto;
+          padding-right: 10px;
+          line-height: 28px;
+          font-size: 12px;
+          color: #6e6e73;
+        }
+
+        html body footer .footer-content .linea{
+          height: 1px;
+          width: 80%;
+          background: #d2d2d7;
+        }
+
+        html body footer .footer-content .footer-bottom {
+
+          display: flex;
+          background: #f5f5f7;
+          width: 100%;
+          text-align: center;
+        }
+
+        html body footer .footer-content .footer-bottom p {
+          float: left;
+          font-size: 14px;
+          word-spacing: 2px;
+          text-transform: capitalize;
+        }
+        html body footer .footer-content .footer-bottom p a {
+          color: #FF8300;
+          font-size: 16px;
+          text-decoration: none;
+        }
+        html body footer .footer-content .footer-bottom span {
+          text-transform: uppercase;
+          opacity: 0.4;
+          font-weight: 200;
+        }
+      </style>
+
+      <footer>
+        <div class="footer-content">
+
+          
+          <h1>Banff Bombas</h1>
+
+          <div class="footer-info">
+            <div>
+              <h2>Titulo</h2>
+              <p>lñaqkmnkjkjnnenkv</p>
+            </div>
+
+            <div>
+              <h2>Titulo</h2>
+              <p>acacscacsacascascacacsacacscacaca</p>
+            </div>
+
+            <div>
+              <h2>Titulo</h2>
+              <p>acascaaasssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+            </div>
+
+            <div>
+              <h2>Titulo</h2>
+              <p>dcqcassssssssssssssssssssssssssssssssss</p>
+            </div>
+            
+
+          </div>
+          
+
+
+          <div class="linea"></div>
+          <div class="footer-bottom">
+            <p>copyright &copy;2022 <a href="#">Banff Bombas S.A.</a></p>
+          </div>
+        </div>
+
+        
+      </footer>
     </div>
 
-    <footer id="gkFooter" class="gkPage">
-      <p id="gkCopyrights"></p>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <a href="https://www.superredtv.cl/" target="_blank"
-                ><img
-                  src="https://superredtv.cl/superredtv_01.png"
-                  alt="Web Marketing y estrategias interactivas"
-                  style="border: 0; float: left"
-              /></a>
-            </td>
+    
 
-            <!--Willy Banff: Informacion repetida
-            <td class="contacto2">
-              Teléfonos:
-              <!-2 2482 7100->2 2392 6500 | Email:
-              contacto.ventas@banffbombas.cl
-            </td>-->
-            
-          </tr>
-        </tbody>
-      </table>
-      <p></p>
-    </footer>
-
-    <div id="gkPopupOverlay"></div>
+    
 
     <!-- +1 button -->
 
