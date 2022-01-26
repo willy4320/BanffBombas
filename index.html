@@ -3812,26 +3812,10 @@
         font-size: 12px;
         text-decoration: none;
       }
-      @media only screen and (max-width: 768px){
-        html body footer .footer-content .footer-info{
-          flex-direction: column;
-        }
-
-        html body footer .footer-content .footer-bottom {
-        
-          padding-bottom: 30px;
-        }
-
-        html body footer .footer-content .footer-info div{
-          padding-left: 20px;   
-        }
-  
-        
-      }
 
       html body footer .footer-content .linea{
         height: 1px;
-        width: 80%;
+        width: 95%;
         background: #d2d2d7;
       }
       
@@ -3841,6 +3825,7 @@
         background: #f5f5f7;
         width: 100%;
         text-align: left;
+        padding-bottom: 15px;
       }
       
 
@@ -3860,6 +3845,33 @@
         opacity: 0.4;
         font-weight: 200;
       }
+
+      @media only screen and (max-width: 768px){
+        html body footer .footer-content .footer-info{
+          flex-direction: column;
+        }
+
+        html body footer .footer-content .footer-info div{
+          padding-left: 30px;   
+        }
+
+        html body footer .footer-content .linea{
+          width: 85%;
+        }
+
+        
+  
+        
+      }
+
+      @media only screen and (min-width: 1200px){
+        html body footer .footer-content{
+          padding-left: 130px;
+          padding-right: 130px;
+        }
+
+        
+      }
     </style>
 
     <footer>
@@ -3869,7 +3881,7 @@
         <h1>Banff Bombas S.A.</h1>
 
         
-        <div class="footer-info">
+        <div class="footer-info" >
           <div>
             <h2>QUIENES SOMOS</h2>
             <p>Somos una empresa dedicada a la distribución, comercialización y montaje de equipos de bombeo de fluidos, pertenecientes al grupo Banff presentes en el mercado desde 1985. Con una vasta experiencia en Chile y Perú, entregamos la mejor asesoría que requiere usted para elegir el equipo indicado para su proceso industrial.</p>
@@ -3892,11 +3904,6 @@
             <p style="text-decoration: none;"><i class="fas fa-phone-volume" style="padding-right: 8px; padding-top: 2px;"></i>2 2392 6500</p>
             <p><i class="fas fa-envelope" style="padding-right: 8px; padding-top: 3px;"></i>contacto.ventas@banffbombas.cl</p>
           </div>
-
-
-
-          
-          
         </div>
         <div class="linea"></div>
         <div class="footer-bottom">
