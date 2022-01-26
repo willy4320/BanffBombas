@@ -1642,11 +1642,6 @@
               html body .barra-burguer_visible {
                 left: 0%;
               }
-
-              html body .barra-burguer_trasparente{
-                opacity: 80%;
-                transition: 0.3s;
-              }
               
 
               html body .burguer {
@@ -3759,10 +3754,17 @@
 
       html body footer .footer-content .footer-info{
         display:inherit;
-        padding-left: 30px;
         padding-bottom: 10px;
         
       }
+
+      html body footer .footer-content .footer-info div{
+        padding-left: 20px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
       html body footer .footer-content .footer-info h2{
         font-size: 1rem;
         font-weight: 500;
@@ -3772,6 +3774,16 @@
         line-height: 2rem;
       }
       
+      html body footer .footer-content .footer-info .serviciosFooter a{
+        display: flex;
+        word-break: break-word;
+        margin: 10px auto;
+        padding-bottom: 10px;
+        
+        line-height: 15px;
+        font-size: 12px;
+        color: #6e6e73;
+      }
       html body footer .footer-content .footer-info p{
         display: flex;
         word-break: break-word;
@@ -3782,9 +3794,19 @@
         color: #6e6e73;
       }
       
+      html body footer .footer-content .footer-info a {
+        color: #FF8300;
+        font-size: 12px;
+        text-decoration: none;
+      }
       @media only screen and (max-width: 768px){
         html body footer .footer-content .footer-info{
           flex-direction: column;
+        }
+
+        html body footer .footer-content .footer-bottom {
+        
+          padding-bottom: 30px;
         }
   
         
@@ -3800,18 +3822,19 @@
         display: flex;
         background: #f5f5f7;
         width: 100%;
-        text-align: center;
+        text-align: left;
       }
+      
 
       html body footer .footer-content .footer-bottom p {
         float: left;
-        font-size: 14px;
+        font-size: 10px;
         word-spacing: 2px;
         text-transform: capitalize;
       }
       html body footer .footer-content .footer-bottom p a {
         color: #FF8300;
-        font-size: 16px;
+        font-size: 10px;
         text-decoration: none;
       }
       html body footer .footer-content .footer-bottom span {
@@ -3832,13 +3855,17 @@
           <div>
             <h2>QUIENES SOMOS</h2>
             <p>Somos una empresa dedicada a la distribución, comercialización y montaje de equipos de bombeo de fluidos, pertenecientes al grupo Banff presentes en el mercado desde 1985. Con una vasta experiencia en Chile y Perú, entregamos la mejor asesoría que requiere usted para elegir el equipo indicado para su proceso industrial.</p>
+            <p>Ofrecemos también todos los equipos necesarios para el correcto funcionamiento de su bomba, sean estos: repuestos, motores, tableros, mangueras, filtros, mezcladores, tanques, agitadores, entre otros. </p>
+            <a href="/index.php/empresa">Leer más</a>
           </div>
 
-          <div>
+          <div class="serviciosFooter">
             <h2>SERVICIOS</h2>
-            <p>- ejemplo</p>
-            <p>- ejemplo</p>
-            <p>- ejemplo</p>
+            <a href="">— Reparación de Bombas en General</a>
+            <a href="">— Ingeniería Básica para Sistemas de Bombeo en General</a>
+            <a href="">— Instalación de Sistemas de Bombeo en General</a>
+            <a href="">— Venta de Bombas Centrifugas y Sistemas de Bombeo</a>
+            <a href="">— Asesoría Técnica en Bombas</a>
           </div>
 
           <div>
@@ -3854,11 +3881,6 @@
           
         </div>
         <div class="linea"></div>
-
-        
-
-
-        
         <div class="footer-bottom">
           <p>copyright &copy;2022 <a href="#">Banff Bombas S.A.</a></p>
         </div>
@@ -3882,7 +3904,6 @@
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         barraBurguer.classList.add("barra-burguer_visible")
-        barraBurguer.classList.add("barra-burguer_trasparente")
         colorBurguer.classList.add("burguerBlanco")
         barraPrincipal.classList.add("barra-principal_visible")
 
@@ -3903,11 +3924,9 @@
 
       if(navMenu.classList.contains("nav-menu_visible")){
           navToggle.setAttribute("arial-label", "Cerrar menú")
-          barraBurguer.classList.remove("barra-burguer_trasparente")
           
       }else{
           navToggle.setAttribute("arial-label", "Abrir menú")
-          barraBurguer.classList.add("barra-burguer_trasparente")
           
       }
 
