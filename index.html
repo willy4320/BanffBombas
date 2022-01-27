@@ -494,7 +494,7 @@
 
       
       div.seccion2 {
-        padding-left: 20px; /*Willy: padding*/
+        padding-left: 20px; /*Willy Banff: padding*/
         padding-right: 20px;
         padding-bottom: 5px;
         padding-top: 50px;
@@ -731,7 +731,7 @@
       }
 
       .myfooter {
-        background-color: #FF8300; /*Pantone 151 naranja: rgb(255, 121, 0)*/
+        background-color: #FF8300; /*Willy Banff: #FF8300 = PANTONE 151 naranja*/
       }
 
       .myfooter table tr td ul li a {
@@ -757,27 +757,13 @@
 
 
       .myfooter table tr td ul {
-        list-style-type: none;/*Willy Banff: Change disc style to none*/
         text-align: left;
-      }
-
-    
-
-      /*Willy: pantalla pequeña*/
-      @media only screen and (max-width: 1024px) {
-
-     
-
-        footer#gkFooter table tr .contacto2 {
-          display: none; /*Willy Banff: Display none on contacts bellow the footer*/
-        }
-
-      
       }
 
       html body table {
         margin-bottom: 0px;
       }
+      
       footer#gkFooter {
         background-color: #999;
         max-width: 100%;
@@ -1042,17 +1028,11 @@
         html body #gkMobileMenu {
           width: 20px;
           float: right;
-          top: 20px; /*Willy Banff: Adjust Burguer button to left*/
           left: 10px;
           position: fixed;
           z-index: 9999;
         }
 
-
-        
-       
-
-     
         html body table.parrafos tr td {
           
           width: 90%;
@@ -1482,15 +1462,13 @@
             </a>
           </h2>
 
-
-          
-
-
+          <!--Willy Banff: barra principal START-->
           <style>
             
-            /*Willy: barra principal*/
+            
             html body .barra-principal{
-              background-color: #425363; /*PANTONE 1545 C*/
+              background: #425363; /*PANTONE 1545 C*/
+              box-shadow: 0 18px 20px 0 rgba(0,0,0,.2);
               display: flex;
               width: 100%;
               height: 45px;
@@ -1545,7 +1523,7 @@
             }
 
 
-            /*Willy: menu burguer*/
+            /*Willy Banff: menu burguer*/
             html body .burguer {
               color: #425363;;
               background: none;
@@ -1632,13 +1610,13 @@
             
             @media only screen and (max-width: 1024px){
 
-              /*Willy: barra principal*/
+              /*Willy Banff: barra principal*/
               html body .barra-principal{
                 display: none;
               }
 
 
-              /*Willy: menu burguer*/
+              /*Willy Banff: menu burguer*/
               html body .barra-burguer{
                 display: block;
                 left: 100%;
@@ -1716,10 +1694,6 @@
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://www.banffbombas.cl/">Inicio</a></li>
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/empresa">Quienes Somos</a></li>
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/index.php/productos">Productos</a></li>
-
-          
-
-            <!---->
 
 
             <li class="nav-menu-item"><a class="nav-menu-link nav-link">
@@ -1821,7 +1795,7 @@
           </div>
           --> 
 
-
+          <!--Willy Banff: miesma barra de negacion pero fijada solo la copie y puse clase = "barra-principal"-->
           <div class="barra-principal">
             <nav id="gkExtraMenu" class="gkMenu">
               <ul class="gkmenu level0">
@@ -2459,7 +2433,7 @@
           </div>
         </div>
       </div>
-
+      <!--Willy Banff: barra principal END-->
    
       
       <div id="slider"> 
@@ -2749,9 +2723,14 @@
               </tr>
             </tbody>
           </table>
+          
+          <!-- Willy Banff: Esta seccion ya esta en "Quienes Somos"
+          <h1 class="miseccion5">Características que nos distinguen</h1>
+          -->
+
         </div>
         
-        <!-- Willy Banff: This section is alreary on "Quienes Somos"
+        <!-- Willy Banff: Esta seccion ya esta en "Quienes Somos"
         <h1 class="miseccion5">Características que nos distinguen</h1>
         <div class="seccion5">
           <table class="newcuadros">
@@ -3200,6 +3179,13 @@
         </div>
       </div>
 
+
+      <!-- Willy Banff: Esta imagen no tiene los colores corporativos correctos"
+      <div class="imagenboton">       
+        <img src="/images/fondoboton1.png" alt="" style="width: 100%;">      
+      </div>
+      -->
+
     </div>
     
 
@@ -3309,9 +3295,9 @@
     crossorigin="anonymous"
   ></script>
   
-  
+  <!--Willy Banff: footer modificado START-->
   <div class="footer-willy" style="padding-top: 5px;">
-    <!--footerWilly-->
+    
     <style>
       html body footer {
         display: flex;
@@ -3405,6 +3391,7 @@
       }
 
       html body footer .footer-content .footer-medio .linea{
+        word-break: break-word;
         height: 1px;
         width: 100%;
         background: #d2d2d7;
@@ -3536,8 +3523,9 @@
       
     </footer>
   </div>
+  <!--Willy Banff: footer modificado END-->
 
-  <!--Willy: functions-->
+  <!--Willy Banff: funciones usadas START-->
   <script type="text/javascript">
 
     const navToggle = document.querySelector(".burguer")
@@ -3586,6 +3574,7 @@
     });
   
   </script>
+  <!--Willy Banff: funciones usadas END-->
     
 
   </body>
