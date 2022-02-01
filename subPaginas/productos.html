@@ -1341,18 +1341,42 @@
 
   <!--Willy Banff: styles general START-->
   <style>
+
+    html body .mifondo section .sidebar{
+      display: none;
+    }
+
+    html body .mifondo section aside .barra-box{
+      display: none;
+    }
     @media only screen and (max-width: 1024px){
         html body .mifondo section{
-          /* Setup Flexbox */
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
+        
+        }
 
-          /* Reverse Column Order */
-          -webkit-flex-flow: column-reverse;
-          flex-flow: column-reverse;
+        html body .mifondo section aside .box1{
+          display: none;
+        }
+
+        html body .mifondo section aside .barra-box{
+          background: royalblue;
+          display: block;
+        }
+            
+        html body .mifondo section aside .box .header{
+          display: none;
+        }
+        html body .mifondo section aside .box .content{
+          position: absolute;
+          right: 10px;
+          top: 250px;
+        }
+
+        html body .mifondo section .sidebar{
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
     }
   </style>
@@ -1851,7 +1875,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="box">
+                  <div class="box1">
                     <h3 class="header">Categorías de Productos</h3>
                     <div class="content">
                       <div id="nextend-accordion-menu-111" class="">
