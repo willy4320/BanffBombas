@@ -1342,16 +1342,18 @@
   <!--Willy Banff: styles general START-->
   <style>
     @media only screen and (max-width: 1024px){
-        html body .mifondo{
-            display: flex;
-            flex-direction: column;
-            
-        }
-        html body .mifondo .gkSidebar{
-            background: royalblue;
-        }
+        html body .mifondo section{
+          /* Setup Flexbox */
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
 
-        
+          /* Reverse Column Order */
+          -webkit-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+        }
     }
   </style>
   <!--Willy Banff: styles general END-->
@@ -3065,7 +3067,6 @@
 
             
           </section>
-
           <div class="micontactocovid">
             <div class="gkPage"></div>
           </div>
