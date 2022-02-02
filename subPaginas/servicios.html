@@ -1350,79 +1350,250 @@
             </a>
           </h2>
 
+          <!--Willy Banff: barra principal START-->
+          <style>
+            
+            
+            html body .barra-principal{
+              background: #425363; /*PANTONE 1545 C*/
+              box-shadow: 0 18px 20px 0 rgba(0,0,0,.2);
+              display: flex;
+              width: 100%;
+              height: 45px;
+              position: fixed;
+              justify-content: center;
+              left: 0;
+              z-index: 9999;
+              top: -100%;
+            }
+
+            html body .barra-principal .gkMenu > ul li div.childcontent{
+              background-color: #425363;
+              top: 50px;
+            }
+
+            html body .barra-principal .gkMenu > ul > li > a {
+              line-height: 15px;
+              font-size: 12px;
+              
+            }
+
+            html body .barra-principal .gkMenu > ul li div.childcontent a{
+              color: #fff;
+            }
+
+            html body .barra-principal ul li a{
+              color: #fff;
+            }
+
+            html body .barra-principal ul li a:hover{
+              color: #FF8300;
+            }
+
+            html body .barra-principal .gkMenu .haschild:hover > a, .gkMenu li.haschild.active:hover > a{
+              color:#FF8300;
+            }
+
+            html body .barra-principal .gkMenu > ul li div.childcontent li:hover > a, .gkMenu > ul li div.childcontent li:hover > a small {
+              color:#FF8300;
+            }
+
+            html body .barra-principal .gkMenu > ul > li.active > a {
+              color: #FF8300;
+            }
+
+            html body .barra-principal_visible{
+              top: 0;
+              transition: 0.3s;
+            }
+
+            /*Willy Banff: menu burguer*/
+            html body .burguer {
+              color: #425363;;
+              background: none;
+              font-size: 22px;
+              padding: 0 16px;
+              line-height: 55px;
+              cursor: pointer;
+              display: none;
+
+              top: -8px;
+              left: 0px;
+              position: fixed;
+              z-index: 99999;
+            }
+
+            html body .nav-menu {
+              display: flex;
+              list-style: none;
+              z-index: 9999;
+              display: none;
+              overflow-x:hidden;
+              
+            }
+
+            html body .nav-menu-item {
+              font-size: 12px;
+              margin: 0 8px;
+              line-height: 60px;
+              text-transform: uppercase;
+              width: max-content;
+              
+            }
+
+            html body .nav-menu select{
+              font-size: 12px;
+              margin: 0 8px;
+              text-transform: uppercase;
+              background: transparent;
+              background-color: #425363;
+              border: none;
+              outline: 0px;
+              color: #fff;
+            }
+
+
+            html body .nav-menu select option {
+              font-size: 10px;
+              text-transform: uppercase;
+            }
+
+            html body .nav-menu-link {
+              padding: 6px 8px;
+              border-radius: 5px;
+              color: #fff;
+            }
+
+            html body .nav-menu-link:hover {
+              background-color: #FF8300;
+              transition: 0.5s;
+            }
+            
+            html body .barra-burguer{
+              position: fixed;
+              display: none;
+              width: 100%;
+              left: 0;
+              top: -1;
+              height: 41px;
+              background-color: #425363;
+              z-index: 9999;
+            }
+            
+            html body .myfooter table tr td h3{
+              padding-top: 5%;
+            }
+
+            html body #gkFooter{
+              background-color: #425363;
+              opacity: 100%;
+            }
+
+            
+            @media only screen and (max-width: 1024px){
+
+              /*Willy Banff: barra principal*/
+              html body .barra-principal{
+                display: none;
+              }
+
+
+              /*Willy Banff: menu burguer*/
+              html body .barra-burguer{
+                display: block;
+                left: 100%;
+                transition: 0.3s;
+
+              }
+
+              html body .burguerBlanco{
+                color: #fff;
+                transition: 0.3s;
+              }
+
+              html body .barra-burguer_visible {
+                left: 0%;
+              }
+              
+
+              html body .burguer {
+                display: block;
+              }
+
+              html body .nav-menu {
+                flex-direction: column;
+                align-items: left;
+                margin: 0px;
+                background-color: #425363; /*Pantone 7545 gris*/
+                position: fixed;
+                top: 40px;
+                max-width: 140px;
+                height: 100%;
+                display: block;
+
+                height: calc(100%-60px);
+                overflow-y: auto;
+
+                left: -100%;
+                transition: 0.3s;
+                
+              }
+
+              
+
+            
+              html body .nav-menu_visible {
+                left: 0%;
+              }
+
+
+
+
+           
+
+              html body .nav-menu-item {
+                line-height: 45px;
+              }
+
+              html body .nav-menu-link:hover {
+                background: none;
+                color: #FF8300;
+              }
+            } 
+          </style>
+
+          <div class="barra-burguer">
+            <button class="burguer" aria-label="Abrir menú">
+              <i class="fas fa-bars"></i>
+              
+            </button>
+          </div>
+          
+
+          <!--barra-navegacion-->
+          <ul class="nav-menu">
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/index.html">Inicio</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/index.html">Quienes Somos</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/subPaginas/productos.html">Productos</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/subPaginas/servicios.html">Servicios</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/index.html">Clientes</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/index.html">Noticias</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="https://willy4320.github.io/willy4320/index.html">Contacto</a></li>
+          </ul>
+
+
+          <!--
           <div id="gkMobileMenu">
+            
             <i class="icon-reorder"></i>
             <select onchange="window.location.href=this.value;">
-              <option value="https://www.banffbombas.cl/">Inicio</option>
-              <option value="https://willy4320.github.io/willy4320/subPaginas/quienesSomos.html">Quienes Somos</option>
-              <option selected="selected" value="/index.php/productos">
-                Productos
+              <option selected="selected" value="https://www.banffbombas.cl/">
+                Inicio
               </option>
-              <option value="/index.php/bombas-centrifugas">
-                — Bombas Centrífugas
-              </option>
-              <option value="/index.php/bombas-de-alta-presion">
-                — Bombas de Alta Presión
-              </option>
-              <option value="/index.php/bombas-de-piston">
-                — Bombas de Pistón
-              </option>
-              <option value="/index.php/bombas-de-piston-circunferencial">
-                — Bombas de Pistón Circunferencial
-              </option>
-              <option value="/index.php/bombas-de-tambor">
-                — Bombas de Tambor
-              </option>
-              <option value="/index.php/bomba-dosificadora">
-                — Bombas Dosificadora
-              </option>
-              <option value="/index.php/bombas-dosificadoras-de-multicabezales">
-                — Bombas Dosificadoras Multicabezales
-              </option>
-              <option value="/index.php/estabilizadores-supresores">
-                — Estabilizadores – Supresores
-              </option>
-              <option value="/index.php/bombas-neumaticas-de-doble-diafragma">
-                — Bombas Neumáticas de Doble Diafragma
-              </option>
-              <option
-                value="/index.php/bombas-de-tornillo-helicoidal-cavidad-progresiva"
-              >
-                — Bombas de Tornillo Helicoidal / Cavidad Progresiva
-              </option>
-              <option value="/index.php/motobombas-y-bombas-sumergibles">
-                — Motobombas Y Bombas Sumergibles
-              </option>
-              <option value="/index.php/bombas-autocebantes">
-                — Bombas Autocebantes
-              </option>
-              <option value="/index.php/bombas-de-engranajes-internos">
-                — Bombas de Engranajes Internos
-              </option>
-              <option value="/index.php/bombas-termoplasticas-de-procesos">
-                — Bombas Termoplásticas de Procesos
-              </option>
-              <option value="/index.php/bombas-peristalticas">
-                — Bombas Peristálticas
-              </option>
-              <option value="/index.php/torres-de-enfriamiento">
-                — Torres de Enfriamiento
-              </option>
-              <option value="/index.php/equipo-de-sanitizacion">
-                — Equipo de Sanitización
-              </option>
-              <option
-                value="/index.php/mangueras-mineras-para-concentrado-y-relave"
-              >
-                — Mangueras Mineras para Concentrado y Relave
-              </option>
-              <option value="/index.php/sistemas-de-osmosis-inversa">
-                — Sistemas de Ósmosis Inversa
-              </option>
+              <option value="#">Quienes Somos</option>
+              <option value="/index.php/productos">Productos</option>
               <option value="#">Servicio</option>
-              <option
-                value="/index.php/servicio/reparacion-de-bombas-en-general"
-              >
+              <option value="/index.php/servicio/reparacion-de-bombas-en-general">
                 — Reparación de Bombas en General
               </option>
               <option
@@ -1443,19 +1614,21 @@
               <option value="/index.php/servicio/asesoria-tecnica-en-bombas">
                 — Asesoría Técnica en Bombas
               </option>
-              <option value="/index.php/clientes">Clientes</option>
-              <option value="/index.php/noticias">Noticias</option>
-              <option value="/index.php/contacto">Contacto</option>
+              <option value="https://willy4320.github.io/willy4320/index.html">Clientes</option>
+              <option value="https://willy4320.github.io/willy4320/index.html">Noticias</option>
+              <option value="https://willy4320.github.io/willy4320/index.html">Contacto</option>
             </select>
           </div>
+          --> 
 
-          <div id="gkMainMenu" class="gkMenuClassic">
+          <!--Willy Banff: miesma barra de negacion pero fijada solo la copie y puse clase = "barra-principal"-->
+          <div class="barra-principal">
             <nav id="gkExtraMenu" class="gkMenu">
               <ul class="gkmenu level0">
-                <li class="first">
+                <li class="first active">
                   <a
                     href="https://willy4320.github.io/willy4320/index.html"
-                    class="first"
+                    class="first active"
                     id="menu101"
                     title="Inicio"
                     onmouseover=""
@@ -1464,7 +1637,7 @@
                 </li>
                 <li>
                   <a
-                    href="https://willy4320.github.io/willy4320/subPaginas/quienesSomos.html"
+                    href="https://willy4320.github.io/willy4320/index.html"
                     id="menu113"
                     title="Quienes Somos"
                     onmouseover=""
@@ -1674,7 +1847,7 @@
                     id="menu115"
                     title="Servicio"
                     onmouseover=""
-                    >Servicio</a
+                    >Servicios</a
                   >
                   <div class="childcontent">
                     <div class="childcontent-inner">
@@ -1736,7 +1909,7 @@
                 </li>
                 <li>
                   <a
-                    href="https://willy4320.github.io/willy4320/subPaginas/clientes"
+                    href="https://willy4320.github.io/willy4320/index.html"
                     id="menu116"
                     title="Clientes"
                     onmouseover=""
@@ -1745,17 +1918,336 @@
                 </li>
                 <li>
                   <a
-                    href="https://willy4320.github.io/willy4320/subPaginas/noticias"
+                    href="https://willy4320.github.io/willy4320/index.html"
                     id="menu117"
                     title="Noticias"
                     onmouseover=""
                     >Noticias</a
                   >
                 </li>
-                <li class="last active">
+                <li class="last">
                   <a
-                    href="https://willy4320.github.io/willy4320/subPaginas/contacto"
-                    class="last active"
+                    href="https://willy4320.github.io/willy4320/index.html"
+                    class="last"
+                    id="menu118"
+                    title="Contacto"
+                    onmouseover=""
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+
+
+          <div id="gkMainMenu" class="gkMenuClassic">
+            <nav id="gkExtraMenu" class="gkMenu">
+              <ul class="gkmenu level0">
+                <li class="first active">
+                  <a
+                    href="https://willy4320.github.io/willy4320/index.html"
+                    class="first active"
+                    id="menu101"
+                    title="Inicio"
+                    onmouseover=""
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://willy4320.github.io/willy4320/index.html"
+                    id="menu113"
+                    title="Quienes Somos"
+                    onmouseover=""
+                    >Quienes Somos</a
+                  >
+                </li>
+                <li class="haschild menudividido">
+                  <a
+                    href="https://willy4320.github.io/willy4320/subPaginas/productos.html"
+                    class="haschild menudividido"
+                    id="menu114"
+                    title="Productos"
+                    onmouseover=""
+                    >Productos</a
+                  >
+                  <div class="childcontent">
+                    <div class="childcontent-inner">
+                      <div class="gkcol gkcol2 first">
+                        <ul class="gkmenu level1">
+                          <li class="first">
+                            <a
+                              href="/index.php/bombas-centrifugas"
+                              class="first"
+                              id="menu175"
+                              title="Bombas Centrífugas"
+                              onmouseover=""
+                              >Bombas Centrífugas</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-alta-presion"
+                              id="menu176"
+                              title="Bombas de Alta Presión"
+                              onmouseover=""
+                              >Bombas de Alta Presión</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-piston"
+                              id="menu177"
+                              title="Bombas de Pistón"
+                              onmouseover=""
+                              >Bombas de Pistón</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-piston-circunferencial"
+                              id="menu179"
+                              title="Bombas de Pistón Circunferencial"
+                              onmouseover=""
+                              >Bombas de Pistón Circunferencial</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-tambor"
+                              id="menu180"
+                              title="Bombas de Tambor"
+                              onmouseover=""
+                              >Bombas de Tambor</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bomba-dosificadora"
+                              id="menu181"
+                              title="Bombas Dosificadora"
+                              onmouseover=""
+                              >Bombas Dosificadora</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-dosificadoras-de-multicabezales"
+                              id="menu182"
+                              title="Bombas Dosificadoras Multicabezales"
+                              onmouseover=""
+                              >Bombas Dosificadoras Multicabezales</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/estabilizadores-supresores"
+                              id="menu183"
+                              title="Estabilizadores – Supresores"
+                              onmouseover=""
+                              >Estabilizadores – Supresores</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-neumaticas-de-doble-diafragma"
+                              id="menu184"
+                              title="Bombas Neumáticas de Doble Diafragma"
+                              onmouseover=""
+                              >Bombas Neumáticas de Doble Diafragma</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-tornillo-helicoidal-cavidad-progresiva"
+                              id="menu185"
+                              title="Bombas de Tornillo Helicoidal / Cavidad Progresiva"
+                              onmouseover=""
+                              >Bombas de Tornillo Helicoidal / Cavidad
+                              Progresiva</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gkcol gkcol2 last">
+                        <ul class="gkmenu level1">
+                          <li class="first">
+                            <a
+                              href="/index.php/motobombas-y-bombas-sumergibles"
+                              class="first"
+                              id="menu186"
+                              title="Motobombas Y Bombas Sumergibles"
+                              onmouseover=""
+                              >Motobombas Y Bombas Sumergibles</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-autocebantes"
+                              id="menu187"
+                              title="Bombas Autocebantes"
+                              onmouseover=""
+                              >Bombas Autocebantes</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-de-engranajes-internos"
+                              id="menu188"
+                              title="Bombas de Engranajes Internos"
+                              onmouseover=""
+                              >Bombas de Engranajes Internos</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-termoplasticas-de-procesos"
+                              id="menu189"
+                              title="Bombas Termoplásticas de Procesos"
+                              onmouseover=""
+                              >Bombas Termoplásticas de Procesos</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/bombas-peristalticas"
+                              id="menu190"
+                              title="Bombas Peristálticas"
+                              onmouseover=""
+                              >Bombas Peristálticas</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/torres-de-enfriamiento"
+                              id="menu191"
+                              title="Torres de Enfriamiento"
+                              onmouseover=""
+                              >Torres de Enfriamiento</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/equipo-de-sanitizacion"
+                              id="menu192"
+                              title="Equipo de Sanitización"
+                              onmouseover=""
+                              >Equipo de Sanitización</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/mangueras-mineras-para-concentrado-y-relave"
+                              id="menu203"
+                              title="Mangueras Mineras para Concentrado y Relave"
+                              onmouseover=""
+                              >Mangueras Mineras para Concentrado y Relave</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/sistemas-de-osmosis-inversa"
+                              id="menu210"
+                              title="Sistemas de Ósmosis Inversa"
+                              onmouseover=""
+                              >Sistemas de Ósmosis Inversa</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="haschild">
+                  <a
+                    href="https://willy4320.github.io/willy4320/subPaginas/servicios.html"
+                    class="haschild"
+                    id="menu115"
+                    title="Servicio"
+                    onmouseover=""
+                    >Servicios</a
+                  >
+                  <div class="childcontent">
+                    <div class="childcontent-inner">
+                      <div class="gkcol gkcol first">
+                        <ul class="gkmenu level1">
+                          <li class="first">
+                            <a
+                              href="/index.php/servicio/reparacion-de-bombas-en-general"
+                              class="first"
+                              id="menu196"
+                              title="Reparación de Bombas en General"
+                              onmouseover=""
+                              >Reparación de Bombas en General</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/servicio/ingenieria-basica-para-sistemas-de-bombeo-en-general"
+                              id="menu197"
+                              title="Ingeniería Básica para Sistemas de Bombeo en General"
+                              onmouseover=""
+                              >Ingeniería Básica para Sistemas de Bombeo en
+                              General</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/servicio/instalacion-de-sistemas-de-bombeo-en-general"
+                              id="menu198"
+                              title="Instalación de Sistemas de Bombeo en General"
+                              onmouseover=""
+                              >Instalación de Sistemas de Bombeo en General</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/index.php/servicio/venta-de-bombas-centrifugas-y-sistemas-de-bombeo"
+                              id="menu199"
+                              title="Venta de Bombas Centrifugas y Sistemas de Bombeo"
+                              onmouseover=""
+                              >Venta de Bombas Centrifugas y Sistemas de
+                              Bombeo</a
+                            >
+                          </li>
+                          <li class="last">
+                            <a
+                              href="/index.php/servicio/asesoria-tecnica-en-bombas"
+                              class="last"
+                              id="menu200"
+                              title="Asesoría Técnica en Bombas"
+                              onmouseover=""
+                              >Asesoría Técnica en Bombas</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="https://willy4320.github.io/willy4320/index.html"
+                    id="menu116"
+                    title="Clientes"
+                    onmouseover=""
+                    >Clientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://willy4320.github.io/willy4320/index.html"
+                    id="menu117"
+                    title="Noticias"
+                    onmouseover=""
+                    >Noticias</a
+                  >
+                </li>
+                <li class="last">
+                  <a
+                    href="https://willy4320.github.io/willy4320/index.html"
+                    class="last"
                     id="menu118"
                     title="Contacto"
                     onmouseover=""
@@ -1767,6 +2259,7 @@
           </div>
         </div>
       </div>
+      <!--Willy Banff: barra principal END-->
       <div id="slider">
         <ul class="jj_sl_navigation jj_transition right">
           <li class="jj_sl_custom1">
@@ -1807,9 +2300,9 @@
               <div id="gkBreadcrumb">
                 <div class="breadcrumbs">
                   <ul>
-                    <li><a href="/index.php" class="pathway">Inicio</a></li>
+                    <li><a href="https://willy4320.github.io/willy4320/index.html" class="pathway">Inicio</a></li>
                     <li class="pathway separator">/</li>
-                    <li class="pathway">Productos</li>
+                    <li class="pathway">Servicios</li>
                   </ul>
                 </div>
 
@@ -1820,1230 +2313,12 @@
                 </div>
               </div>
 
-              <div id="gkMainbody" style="font-size: 100%">
-                <article class="item-page">
-                  <div class="itemBody">
-                    <header>
-                      <h1>Productos</h1>
-                    </header>
-
-                    <div>
-                      <div id="gk-ln">
-                        <a
-                          href="http://battlefield4.com.ua/"
-                          target="_blank"
-                          title="прохождение Battlefield 4"
-                          >прохождение Battlefield 4</a
-                        ><br /><a
-                          href="http://probusiness.biz/"
-                          target="_blank"
-                          title="бизнес план"
-                          >бизнес план</a
-                        >
-                      </div>
-
-                      <table style="background-color: transparent">
-                        <tbody>
-                          <tr>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-neumaticas-de-doble-diafragma/yamada"
-                                  ><img
-                                    src="/images/logos/153.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Yamada</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-de-tornillo-helicoidal-cavidad-progresiva/seepex"
-                                  ><img
-                                    src="/images/logos/seepex.jpg"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Seepex</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a href="/index.php/obl-pumps"
-                                  ><img
-                                    src="/images/headers/obl-slider-OK-300x300.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Obl</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-centrifugas/franklin-electric"
-                                  ><img
-                                    src="/images/logos/franklin-electric.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Franklin Electric</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-de-alta-presion/hydra-cell"
-                                  ><img
-                                    src="/images/logos/hydra-cell.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Hydra-Cell</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-de-piston-circunferencial/q-pumps"
-                                  ><img
-                                    src="/images/logos/Ampco-stacked-RETNA-STICKY2.jpg"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Ampco</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a href="/index.php/bombas-centrifugas/bominox"
-                                  ><img
-                                    src="/images/logos/bominox.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Bominox</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a href="/index.php/varisco"
-                                  ><img
-                                    src="/images/logos/varisco.jpg"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Varisco</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-centrifugas/hidrostal"
-                                  ><img
-                                    src="/images/logos/hidrostal.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Hidrostal</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-de-tambor/standard-pumps"
-                                  ><img
-                                    src="/images/logos/standard_logo.jpg"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Standard Pump</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-termoplasticas-de-procesos/affetti"
-                                  ><img
-                                    src="/images/logos/afetti.png"
-                                    alt=""
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Affetti</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-centrifugas/march-pumps"
-                                  ><img
-                                    src="/images/logos/march_logo.jpg"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">March Pumps</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a href="/index.php/bombas-centrifugas/imbil"
-                                  ><img
-                                    src="/images/logos/imbil.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Imbil</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/intercambiadores-de-calor-de-placas/sondex"
-                                  ><img
-                                    src="/images/logos/sondex.jpg"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Sondex</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/torres-de-enfriamiento/alpina"
-                                  ><img
-                                    src="/images/logos/alpina.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Alpina</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/mangueras-mineras-para-concentrado-y-relave/composit"
-                                  ><img
-                                    src="/images/logos/composit1.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Composit</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-centrifugas/torishima"
-                                  ><img
-                                    src="/images/Torishima_logo.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Torishima</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/bombas-centrifugas/carver-pumps"
-                                  ><img
-                                    src="/images/nav-logo.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Carver Pumps</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a
-                                  href="/index.php/sistemas-de-osmosis-inversa/pure-aqua"
-                                  ><img
-                                    src="/images/164.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Pure Aqua</p>
-                            </td>
-                            <td
-                              style="
-                                text-align: center;
-                                font-size: 11px;
-                                border: 1px solid #e5e5e5;
-                              "
-                            >
-                              <p>
-                                <a href="/index.php/bombas-centrifugas/emica"
-                                  ><img
-                                    src="/images/166.png"
-                                    width="150"
-                                    height="150"
-                                    border="0"
-                                /></a>
-                              </p>
-                              <p style="color: black">Emica</p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div id="gkSocialAPI">
-                      <div
-                        id="___plusone_0"
-                        style="position: absolute; width: 450px; left: -10000px"
-                      >
-                        <iframe
-                          ng-non-bindable=""
-                          frameborder="0"
-                          hspace="0"
-                          marginheight="0"
-                          marginwidth="0"
-                          scrolling="no"
-                          style="
-                            position: absolute;
-                            top: -10000px;
-                            width: 450px;
-                            margin: 0px;
-                            border-style: none;
-                          "
-                          tabindex="0"
-                          vspace="0"
-                          width="100%"
-                          id="I0_1643655345883"
-                          name="I0_1643655345883"
-                          src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;hl=en-GB&amp;origin=https%3A%2F%2Fwww.banffbombas.cl&amp;url=https%3A%2F%2Fwww.banffbombas.cl%2Findex.php%2Fproductos&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.es_419.63PgX-Kp0o0.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCO75c3W-w27SfLThvvzwjgBgEIiLg%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1643655345883&amp;_gfid=I0_1643655345883&amp;parent=https%3A%2F%2Fwww.banffbombas.cl&amp;pfname=&amp;rpctoken=84316486"
-                          data-gapiattached="true"
-                        ></iframe>
-                      </div>
-                      <g:plusone
-                        size="medium"
-                        callback="https://www.banffbombas.cl/index.php/productos"
-                        data-gapiscan="true"
-                        data-onload="true"
-                        data-gapistub="true"
-                      ></g:plusone>
-                      <div
-                        id="___plus_0"
-                        style="position: absolute; width: 450px; left: -10000px"
-                      >
-                        <iframe
-                          ng-non-bindable=""
-                          frameborder="0"
-                          hspace="0"
-                          marginheight="0"
-                          marginwidth="0"
-                          scrolling="no"
-                          style="
-                            position: absolute;
-                            top: -10000px;
-                            width: 450px;
-                            margin: 0px;
-                            border-style: none;
-                          "
-                          tabindex="0"
-                          vspace="0"
-                          width="100%"
-                          id="I1_1643655345888"
-                          name="I1_1643655345888"
-                          src="https://apis.google.com/u/0/se/0/_/+1/sharebutton?plusShare=true&amp;usegapi=1&amp;action=share&amp;annotation=vertical-bubble&amp;hl=en-GB&amp;origin=https%3A%2F%2Fwww.banffbombas.cl&amp;url=https%3A%2F%2Fwww.banffbombas.cl%2Findex.php%2Fproductos&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.es_419.63PgX-Kp0o0.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCO75c3W-w27SfLThvvzwjgBgEIiLg%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I1_1643655345888&amp;_gfid=I1_1643655345888&amp;parent=https%3A%2F%2Fwww.banffbombas.cl&amp;pfname=&amp;rpctoken=17608157"
-                          data-gapiattached="true"
-                        ></iframe>
-                      </div>
-                      <g:plus
-                        action="share"
-                        annotation="vertical-bubble"
-                        href="https://www.banffbombas.cl/index.php/productos"
-                        data-gapiscan="true"
-                        data-onload="true"
-                        data-gapistub="true"
-                      ></g:plus>
-                    </div>
-                    <div id="gk-ln">
-                      <a
-                        href="http://portalinfo.org/"
-                        target="_blank"
-                        title="начать бизнес с нуля"
-                        >начать бизнес с нуля</a
-                      ><br /><a
-                        href="http://seo-live.com/"
-                        target="_blank"
-                        title="как создать сайт"
-                        >как создать сайт</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
+              <header>
+                <h1>Servicios</h1>
+              </header>
 
               <div id="gkMainbodyBottom"></div>
             </div>
-
-            <aside id="gkSidebar">
-              <div>
-                <div class="box">
-                  <h3 class="header">Buscar</h3>
-                  <div class="content">
-                    <div id="k2ModuleBox116" class="k2SearchBlock">
-                      <form
-                        action="/index.php/component/k2/itemlist/search"
-                        method="get"
-                        autocomplete="off"
-                        class="k2SearchBlockForm"
-                      >
-                        <input
-                          type="text"
-                          value="Buscar"
-                          name="searchword"
-                          maxlength="20"
-                          size="20"
-                          alt="Buscar"
-                          class="inputbox"
-                          onblur="if(this.value=='') this.value='Buscar';"
-                          onfocus="if(this.value=='Buscar') this.value='';"
-                        />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div class="box">
-                  <h3 class="header">Categorías de Productos</h3>
-                  <div class="content">
-                    <div id="nextend-accordion-menu-111" class="">
-                      <div class="nextend-accordion-menu-inner">
-                        <div class="nextend-accordion-menu-inner-container">
-                          <dl class="level1">
-                            <dt class="level1 nextend-nav-126 parent first">
-                              <span class="inner">
-                                <a href="/index.php/bombas-centrifugas"
-                                  ><span>Bombas Centrífugas</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-126 parent first">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-127 notparent first"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/patterson-pumps"
-                                      ><span>Patterson Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-127 notparent first"
-                                ></dd>
-                                <dt class="level2 nextend-nav-128 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/bominox"
-                                      ><span> Bominox</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-128 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-129 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/hidrostal"
-                                      ><span>Hidrostal</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-129 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-130 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/march-pumps"
-                                      ><span>March Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-130 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-131 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/imbil"
-                                      ><span> Imbil</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-131 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-132 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/m-pumps"
-                                      ><span>M Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-132 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-133 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/franklin-electric"
-                                      ><span>Franklin Electric</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-133 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-134 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/ideal"
-                                      ><span>Ideal</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-134 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-204 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/torishima"
-                                      ><span>Torishima</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-204 notparent"
-                                ></dd>
-                                <dt class="level2 nextend-nav-205 notparent">
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/carver-pumps"
-                                      ><span>Carver Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-205 notparent"
-                                ></dd>
-                                <dt
-                                  class="level2 nextend-nav-212 notparent last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-centrifugas/emica"
-                                      ><span>EMICA</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-212 notparent last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-135 parent">
-                              <span class="inner">
-                                <a href="/index.php/bombas-de-alta-presion"
-                                  ><span>Bombas de Alta Presión</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-135 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-136 notparent first"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-alta-presion/speck-triplex"
-                                      ><span>Speck Triplex</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-136 notparent first"
-                                ></dd>
-                                <dt
-                                  class="level2 nextend-nav-137 notparent last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-alta-presion/hydra-cell"
-                                      ><span>Hydra-Cell</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-137 notparent last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-138 parent">
-                              <span class="inner">
-                                <a href="/index.php/bombas-de-piston"
-                                  ><span>Bombas de Pistón</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-138 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-139 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-piston/hydra-cell"
-                                      ><span>Hydra-Cell</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-139 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-142 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/bombas-de-piston-circunferencial"
-                                  ><span
-                                    >Bombas de Pistón Circunferencial</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-142 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-143 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-piston-circunferencial/q-pumps"
-                                      ><span>Ampco</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-143 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-144 parent">
-                              <span class="inner">
-                                <a href="/index.php/bombas-de-tambor"
-                                  ><span>Bombas de Tambor</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-144 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-145 notparent first"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-tambor/ist-pumps"
-                                      ><span>Ist Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-145 notparent first"
-                                ></dd>
-                                <dt
-                                  class="level2 nextend-nav-146 notparent last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-tambor/standard-pumps"
-                                      ><span>Standard Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-146 notparent last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-147 parent">
-                              <span class="inner">
-                                <a href="/index.php/bomba-dosificadora"
-                                  ><span>Bomba Dosificadora</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-147 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-148 notparent first"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bomba-dosificadora/otras-marcas"
-                                      ><span>Obl Pumps</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-148 notparent first"
-                                ></dd>
-                                <dt
-                                  class="level2 nextend-nav-211 notparent last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bomba-dosificadora/ecolab"
-                                      ><span>ECOLAB</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-211 notparent last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-149 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/bombas-dosificadoras-de-multicabezales"
-                                  ><span
-                                    >Bombas Dosificadoras Multicabezales</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-149 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-150 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-dosificadoras-de-multicabezales/obl"
-                                      ><span>Obl</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-150 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-151 parent">
-                              <span class="inner">
-                                <a href="/index.php/estabilizadores-supresores"
-                                  ><span>Estabilizadores – Supresores</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-151 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-152 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/estabilizadores-supresores/blacoh"
-                                      ><span>Blacoh</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-152 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-153 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/bombas-neumaticas-de-doble-diafragma"
-                                  ><span
-                                    >Bombas Neumáticas de Doble Diafragma</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-153 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-154 notparent first"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-neumaticas-de-doble-diafragma/yamada"
-                                      ><span>Yamada</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-154 notparent first"
-                                ></dd>
-                                <dt
-                                  class="level2 nextend-nav-155 notparent last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-neumaticas-de-doble-diafragma/otras-marcas"
-                                      ><span>Otras Marcas</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-155 notparent last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-156 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/bombas-de-tornillo-helicoidal-cavidad-progresiva"
-                                  ><span
-                                    >Bombas de Tornillo Helicoidal / Cavidad
-                                    Progresiva</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-156 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-157 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-tornillo-helicoidal-cavidad-progresiva/seepex"
-                                      ><span>Seepex</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-157 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-158 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/motobombas-y-bombas-sumergibles"
-                                  ><span
-                                    >Motobombas y Bombas Sumergibles</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-158 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-159 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/motobombas-y-bombas-sumergibles/varisco"
-                                      ><span>Varisco</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-159 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-160 parent">
-                              <span class="inner">
-                                <a href="/index.php/bombas-autocebantes"
-                                  ><span>Bombas Autocebantes</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-160 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-161 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-autocebantes/varisco-serie-j"
-                                      ><span>Varisco Serie J</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-161 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-162 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/bombas-de-engranajes-internos"
-                                  ><span>Bombas de Engranajes Internos</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-162 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-163 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-de-engranajes-internos/varisco"
-                                      ><span>Varisco</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-163 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-164 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/bombas-termoplasticas-de-procesos"
-                                  ><span
-                                    >Bombas Termoplásticas de Procesos</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-164 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-165 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-termoplasticas-de-procesos/affetti"
-                                      ><span>Affetti</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-165 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-166 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/intercambiadores-de-calor-de-placas"
-                                  ><span
-                                    >Intercambiadores de Calor de Placas</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-166 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-167 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/intercambiadores-de-calor-de-placas/sondex"
-                                      ><span>Sondex</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-167 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-168 parent">
-                              <span class="inner">
-                                <a href="/index.php/mezclador-estaticos"
-                                  ><span>Mezcladores Estáticos</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-168 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-169 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/mezclador-estaticos/komax"
-                                      ><span>Komax</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-169 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-170 parent">
-                              <span class="inner">
-                                <a href="/index.php/bombas-peristalticas"
-                                  ><span>Bombas Peristálticas</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-170 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-171 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/bombas-peristalticas/albin-pump"
-                                      ><span>Albin Pump</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-171 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-172 notparent">
-                              <span class="inner">
-                                <a href="/index.php/equipo-de-sanitizacion"
-                                  ><span>Equipo de Sanitización</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-172 notparent"></dd>
-                            <dt class="level1 nextend-nav-173 parent">
-                              <span class="inner">
-                                <a href="/index.php/torres-de-enfriamiento"
-                                  ><span>Torres de Enfriamiento</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-173 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-174 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/torres-de-enfriamiento/alpina"
-                                      ><span>Alpina</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-174 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-201 parent">
-                              <span class="inner">
-                                <a
-                                  href="/index.php/mangueras-mineras-para-concentrado-y-relave"
-                                  ><span
-                                    >Mangueras Mineras para Concentrado y
-                                    Relave</span
-                                  ></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-201 parent">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-202 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/mangueras-mineras-para-concentrado-y-relave/composit"
-                                      ><span>Composit</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-202 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                            <dt class="level1 nextend-nav-208 parent last">
-                              <span class="inner">
-                                <a href="/index.php/sistemas-de-osmosis-inversa"
-                                  ><span>Sistemas de Ósmosis Inversa</span></a
-                                >
-                              </span>
-                            </dt>
-                            <dd class="level1 nextend-nav-208 parent last">
-                              <dl class="level2">
-                                <dt
-                                  class="level2 nextend-nav-209 notparent first last"
-                                >
-                                  <span class="inner">
-                                    <a
-                                      href="/index.php/sistemas-de-osmosis-inversa/pure-aqua"
-                                      ><span>Pure Aqua</span></a
-                                    >
-                                  </span>
-                                </dt>
-                                <dd
-                                  class="level2 nextend-nav-209 notparent first last"
-                                ></dd>
-                              </dl>
-                            </dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
           </section>
 
           <div class="micontactocovid">
@@ -3295,6 +2570,57 @@
         </footer>
     </div>
     <!--Willy Banff: footer modificado END-->
+    
+    <!--Willy Banff: funciones usadas START-->
+    <script type="text/javascript">
+
+      const navToggle = document.querySelector(".burguer")
+      const navMenu = document.querySelector(".nav-menu")
+      const barraBurguer = document.querySelector(".barra-burguer")
+      const colorBurguer = document.querySelector(".burguer")
+      const barraPrincipal = document.querySelector(".barra-principal")
+
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          barraBurguer.classList.add("barra-burguer_visible")
+          colorBurguer.classList.add("burguerBlanco")
+          barraPrincipal.classList.add("barra-principal_visible")
+
+        } else {
+          barraBurguer.classList.remove("barra-burguer_visible")
+          colorBurguer.classList.remove("burguerBlanco")
+          navMenu.classList.remove("nav-menu_visible")
+          barraPrincipal.classList.remove("barra-principal_visible")
+        }
+      }
+
+      navToggle.addEventListener('click', ()=>{
+        navMenu.classList.toggle("nav-menu_visible")
+    
+        if(!barraBurguer.classList.toggle("barra-burguer_visible") && document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+          barraBurguer.classList.toggle("barra-burguer_visible")
+        }
+
+        if(navMenu.classList.contains("nav-menu_visible")){
+            navToggle.setAttribute("arial-label", "Cerrar menú")
+            
+        }else{
+            navToggle.setAttribute("arial-label", "Abrir menú")
+            
+        }
+
+        if(navMenu.classList.contains("nav-menu_visible") || barraBurguer.classList.contains("barra-burguer_visible")){
+          colorBurguer.classList.add("burguerBlanco")
+        }else{
+          colorBurguer.classList.remove("burguerBlanco")
+        }
+        
+      });
+    
+    </script>
+    <!--Willy Banff: funciones usadas END-->
 
     <!-- +1 button -->
 
