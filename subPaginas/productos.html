@@ -1339,6 +1339,12 @@
     </style>
   </head>
 
+
+  <script
+    src="https://kit.fontawesome.com/37be89b3d2.js"
+    crossorigin="anonymous"
+  ></script>
+  
   <!--Willy Banff: styles general START-->
   <style>
 
@@ -1349,38 +1355,162 @@
     html body .mifondo section aside .barra-box{
       display: none;
     }
+
     @media only screen and (max-width: 1024px){
-        html body .mifondo section{
+ 
+
+      html body .mifondo section aside .box1{
+        display: none;
+      }
+
+      html body .mifondo section aside .barra-box{
+        display: block;
+      }
+          
+      html body .mifondo section aside .box .header{
+        display: none;
+      }
+      html body .mifondo section aside .box .content{
+        position: absolute;
+        right: 10px;
+        top: 250px;
+      }
+
+      html body .mifondo .sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        height: 100%;
+        width: 60%;
+        min-width: 210px;
+        background: #425363;
         
-        }
+      }
 
-        html body .mifondo section aside .box1{
-          display: none;
-        }
+      html body .mifondo .sidebar .logo-details{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: #425363;
+        filter: brightness(85%);
+        
 
-        html body .mifondo section aside .barra-box{
-          background: royalblue;
-          display: block;
-        }
-            
-        html body .mifondo section aside .box .header{
-          display: none;
-        }
-        html body .mifondo section aside .box .content{
-          position: absolute;
-          right: 10px;
-          top: 250px;
-        }
+      }
 
-        html body .mifondo section .sidebar{
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
+      html body .mifondo .sidebar .logo-details .logo-name{
+        font-size: 18px;
+        font-weight: 600;
+        padding-left: 20px;
+        color: #fff;
+      }
+
+
+      .sidebar .nav-links{
+        height: 100%;
+        padding: 30px 0 150px 0;
+        overflow: auto;
+        background: #425363;
+        
+        
+      }
+
+      .sidebar .nav-links::-webkit-scrollbar{
+        display: none;
+      }
+
+      .sidebar .nav-links li a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #fff;
+      }
+
+      html body .mifondo .sidebar .nav-links{
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 0px;
+        
+      }
+      .sidebar .nav-links li .iocn-link{
+        position: relative;
+        list-style: none;
+        transition: all 0.4s ease;
+        
+      }
+      .sidebar .nav-links li .iocn-link:hover{
+        background: #425363;
+        filter: brightness(85%);
+      }
+
+      .sidebar .nav-links li .iocn-link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+      }
+      
+
+      .sidebar .nav-links li i{
+        height: 50px;
+        min-width: 78px;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .sidebar .nav-links li.showMenu i.arrow{
+        transform: rotate(-180deg);
+      }
+      .sidebar .nav-links li a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .sidebar .nav-links li .sub-menu{
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        word-break: normal;
+        margin-top: -10px;
+        background: #425363;
+        filter: brightness(85%);
+        display: none;
+
+      }
+      .sidebar .nav-links li.showMenu .sub-menu{
+        display: block;
+
+      }
+      
+      .sidebar .nav-links li .sub-menu a{
+        color: #fff;
+        font-size: 12px;
+        padding: 5px 0px;
+        max-width: 20px;
+        white-space: nowrap;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+
+      }
+
+
+      .sidebar .nav-links li .sub-menu a:hover{
+        opacity: 1;
+      }
+
+      .sidebar.close .nav-links li .sub-menu .link_name{
+        font-size: 18px;
+        opacity: 1;
+      }
+  
     }
   </style>
   <!--Willy Banff: styles general END-->
+
   <body id="productos" data-tablet-width="1024" data-mobile-width="580">
     <div id="gkMainWrap">
       <div id="gkHeaderNav" class="gkPage">
@@ -1846,7 +1976,349 @@
       <div id="parrafos"></div>
       <div id="gkPageContent">
         <div class="mifondo">
+        
+          <div class="sidebar">
+            <div class="logo-details">
+              <span class="logo-name">Categorías de Productos</span>
+            </div>
 
+            <ul class="nav-links">
+              
+              <li>
+            
+                <div class="iocn-link">
+                  <a href="/index.php/bombas-centrifugas">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Bombas Centrífugas
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="/index.php/bombas-centrifugas/patterson-pumps">Patterson Pumps</a></li>
+                  <li><a href="/index.php/bombas-centrifugas/bominox">Bominox</a></li>
+                  <li><a href="/index.php/bombas-centrifugas/hidrostal">Hidrostal</a></li>
+                  <li><a href="/index.php/bombas-centrifugas/march-pumps">March Pumps</a></li>
+                  <li><a href="#">Marca</a></li>
+                  <li><a href="#">Marca</a></li>
+                  <li><a href="#">Marca</a></li>
+                  <li><a href="#">Marca</a></li>
+                  <li><a href="#">Marca</a></li>
+                  <li><a href="#">Marca</a></li>
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name" style="padding-left: 20px;">
+                      Tipo Bomba
+                    </span>
+                  </a>
+                  <i class="fas fa-chevron-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                  <li><a href="#">Marca</a></li>
+                </ul>
+              </li>
+
+            </ul>
+      
+
+          </div>
+          <script>
+            let arrow = document.querySelectorAll(".arrow");
+            for (var i = 0; i < arrow.length; i++) {
+              arrow[i].addEventListener("click", (e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+              });
+            }
+          </script>
+    
           <section id="gkContent" class="gkPage">
             <aside id="gkSidebar">
                 <div>
@@ -1875,6 +2347,7 @@
                       </div>
                     </div>
                   </div>
+                  
                   <div class="box1">
                     <h3 class="header">Categorías de Productos</h3>
                     <div class="content">
@@ -2567,8 +3040,13 @@
                       </div>
                     </div>
                   </div>
+  
                 </div>
+                
               </aside>
+
+
+            
             <div id="gkContentWrap">
               <div id="gkBreadcrumb">
                 <div class="breadcrumbs">
