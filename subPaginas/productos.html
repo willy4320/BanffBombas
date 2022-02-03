@@ -1394,8 +1394,50 @@
         
       }
 
-      .mifondo .sidebar.visible{
+      .mifondo .sidebarVisible{
         left: 0;
+      }
+
+      .sidebar .barra-label{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding-left: 130px;
+        transition: 0.3s;
+      }
+
+
+      .sidebar .category{
+        color: #fff;
+        background: #425363;
+        display: flex;
+        align-items: center;
+        height: 55px;
+      }
+
+      .sidebar .textoCategory{
+        padding-left: 20px;
+      }
+
+      .sidebar.sidebarVisible .textoCategory{
+        display: none;
+      }
+
+
+      .mifondo .sidebar .arrow1{
+        height: 15px;
+        color: #fff;
+        background: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+
+      .mifondo .sidebar .arrowVisible{
+        transform: rotate(180deg);
+        transition: all 0.3s ease;
       }
 
       .mifondo .sidebar .logo-details{
@@ -1413,57 +1455,6 @@
 
       }
       
-      .sidebar .barra-label{
-        display: flex;
-        justify-content: end;
-        width: 100%;
-        padding-left: 130px;
-        transition: 0.3s;
-      }
-
-      .sidebar .barra-label.invisible{
-        padding-left: 40px;
-        background: #425363;
-        filter: brightness(85%);
-      }
-
-      .sidebar .category{
-        color: #fff;
-        background: #425363;
-        display: flex;
-        align-items: center;
-        height: 55px;
-      }
-
-      .sidebar .textoCategory{
-        padding-left: 20px;
-      }
-
-      .sidebar.visible .textoCategory{
-        display: none;
-      }
-
-
-      .mifondo .sidebar .arrow1{
-        height: 15px;
-        color: #fff;
-        background: none;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-right: 20px;
-        padding-left: 20px;
-        border-radius: 0px 10px 10px 0;
-      }
-
-
-      .mifondo .sidebar .arrow1.visible{
-        
-        transform: rotate(180deg);
-        transition: all 0.3s ease;
-      }
-
-     
-
       .mifondo .sidebar .barra-busqueda{
         padding-top: 5px;
         padding-left: 20px;
@@ -2911,10 +2902,6 @@
           </div>
           <script>
             let arrow = document.querySelectorAll(".arrow");
-    
-            const arrow1 = document.querySelector(".arrow1")
-            const sidebar = document.querySelector(".sidebar")
-
             for (var i = 0; i < arrow.length; i++) {
               arrow[i].addEventListener("click", (e)=>{
                 let arrowParent = e.target.parentElement.parentElement;
@@ -2922,28 +2909,13 @@
               });
             }
             
-
+            const arrow1 = document.querySelector(".arrow1")
+            const sidebar = document.querySelector(".sidebar")
             arrow1.addEventListener('click', ()=>{
-              arrow1.classList.toggle("visible")
-              sidebar.classList.toggle("visible")
+              arrow1.classList.toggle("arrowVisible")
+              sidebar.classList.toggle("sidebarVisible")
               
             });
-
-            /*
-            for (var i = 0; i < arrow1.length; i++) {
-              arrow1[i].addEventListener("click", (e)=>{
-                let arrowParent1 = e.target.parentElement.parentElement.parentElement;
-                let arrowParent2 = e.target.parentElement.parentElement;
-                let arrowParent3 = e.target;
-                arrowParent1.classList.toggle("visible");
-                arrowParent2.classList.toggle("invisible");
-                arrowParent3.classList.toggle("visible");
-                console.log(arrowParent1)
-                console.log(arrowParent2)
-                console.log(arrowParent3)
-              });
-            }
-            */
           </script>
     
           <section id="gkContent" class="gkPage">
