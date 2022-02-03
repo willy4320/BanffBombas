@@ -1451,7 +1451,9 @@
         border-radius: 0px 10px 10px 0;
       }
 
+    
       .sidebar .barra-label.invisible{
+        padding-left: 40px;
         background: #425363;
         filter: brightness(85%);
       }
@@ -2549,9 +2551,9 @@
             <div class="barra-label">
               <div class="label">
                 <span class="category">
-                  Categorías
+                  Categorías<i class="fas fa-chevron-right arrow1"></i>
                 </span>
-                <i class="fas fa-chevron-right arrow1"></i>
+                
               </div>
             </div>
             
@@ -2938,11 +2940,14 @@
             for (var i = 0; i < arrow1.length; i++) {
               arrow1[i].addEventListener("click", (e)=>{
                 let arrowParent1 = e.target.parentElement.parentElement.parentElement;
-                let arrowParent2 = e.target.parentElement.parentElement;
+                let arrowParent2 = e.target.parentElement.parentElement.parentElement.parentElement;
                 let arrowParent3 = e.target;
-                arrowParent1.classList.toggle("visible");
-                arrowParent2.classList.toggle("invisible");
+                let arrowParent4 = e.target.parentElement;
+                arrowParent1.classList.toggle("invisible");
+                arrowParent2.classList.toggle("visible");
                 arrowParent3.classList.toggle("visible");
+                arrowParent4.classList.toggle("invisible");
+                console.log(arrowParent4)
               });
             }
           </script>
