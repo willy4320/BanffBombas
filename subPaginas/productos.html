@@ -1376,7 +1376,7 @@
         top: 250px;
       }
 
-      html body .mifondo .sidebar{
+      .mifondo .sidebar{
         display: block;
         position: fixed;
         width: 60%;
@@ -1389,6 +1389,7 @@
 
 
         right: 100%;
+        /*left: 0;*/
         transition: 0.3s;
         
       }
@@ -1425,10 +1426,6 @@
         background: #425363;
         filter: brightness(85%);
       }
-
-    
-
-      
 
       .sidebar .category{
         color: #fff;
@@ -2914,7 +2911,9 @@
           </div>
           <script>
             let arrow = document.querySelectorAll(".arrow");
-            let arrow1 = document.querySelectorAll(".arrow1");
+    
+            const arrow1 = document.querySelector(".arrow1")
+            const sidebar = document.querySelector(".sidebar")
 
             for (var i = 0; i < arrow.length; i++) {
               arrow[i].addEventListener("click", (e)=>{
@@ -2922,7 +2921,15 @@
                 arrowParent.classList.toggle("showMenu");
               });
             }
+            
 
+            arrow1.addEventListener('click', ()=>{
+              arrow1.classList.toggle("visible")
+              sidebar.classList.toggle("visible")
+              
+            });
+
+            /*
             for (var i = 0; i < arrow1.length; i++) {
               arrow1[i].addEventListener("click", (e)=>{
                 let arrowParent1 = e.target.parentElement.parentElement.parentElement;
@@ -2936,6 +2943,7 @@
                 console.log(arrowParent3)
               });
             }
+            */
           </script>
     
           <section id="gkContent" class="gkPage">
