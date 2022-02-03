@@ -1413,6 +1413,8 @@
       }
       
       .sidebar .barra-label{
+        display: flex;
+        justify-content: end;
         width: 100%;
         padding-left: 130px;
         transition: 0.3s;
@@ -1424,11 +1426,7 @@
         filter: brightness(85%);
       }
 
-      .sidebar .barra-label .label{
-        display: flex;
-        justify-content: end;
-        
-      }
+    
 
       
 
@@ -1446,7 +1444,6 @@
 
       .sidebar.visible .textoCategory{
         display: none;
-        transition: 0.3s;
       }
 
 
@@ -2541,11 +2538,9 @@
           <div class="sidebar">
 
             <div class="barra-label">
-              <div class="label">
-                <span class="category">
-                  <span class="textoCategory">Categorías</span>  <i class="fas fa-chevron-right arrow1" style="cursor: pointer;"></i>
-                </span>
-              </div>
+              <span class="category">
+                <span class="textoCategory">Categorías</span>  <i class="fas fa-chevron-right arrow1" style="cursor: pointer;"></i>
+              </span>
             </div>
             
 
@@ -2931,12 +2926,14 @@
             for (var i = 0; i < arrow1.length; i++) {
               arrow1[i].addEventListener("click", (e)=>{
                 let arrowParent1 = e.target.parentElement.parentElement.parentElement;
-                let arrowParent2 = e.target.parentElement.parentElement.parentElement.parentElement;
+                let arrowParent2 = e.target.parentElement.parentElement;
                 let arrowParent3 = e.target;
-                let arrowParent4 = e.target.parentElement;
-                arrowParent1.classList.toggle("invisible");
-                arrowParent2.classList.toggle("visible");
+                arrowParent1.classList.toggle("visible");
+                arrowParent2.classList.toggle("invisible");
                 arrowParent3.classList.toggle("visible");
+                console.log(arrowParent1)
+                console.log(arrowParent2)
+                console.log(arrowParent3)
               });
             }
           </script>
