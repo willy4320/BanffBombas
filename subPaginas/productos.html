@@ -1379,14 +1379,14 @@
       .mifondo .sidebar{
         display: block;
         position: fixed;
-        width: 220px;
+        width: 40%;
         height: 100%;
         top: 40px;
         z-index: 999;
         min-width: 210px;
         background: #425363;
 
-        left:-220px;
+        left: -40%;
         transition: 0.3s;
         
       }
@@ -1398,7 +1398,8 @@
       .sidebar .barra-label{
         display: flex;
         justify-content: end;
-        min-width: 480px;
+        width: 100%;
+        padding-left: 130px;
         transition: 0.3s;
       }
 
@@ -1413,6 +1414,10 @@
 
       .sidebar .textoCategory{
         padding-left: 20px;
+      }
+
+      .sidebar.sidebarVisible .textoCategory{
+        display: none;
       }
 
 
