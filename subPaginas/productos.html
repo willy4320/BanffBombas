@@ -1419,7 +1419,7 @@
       }
 
       .sidebar .barra-label.invisible{
-        padding-left: 0px;
+        padding-left: 40px;
         background: #425363;
         filter: brightness(85%);
       }
@@ -1438,7 +1438,15 @@
         display: flex;
         align-items: center;
         height: 55px;
-        padding-left: 0px;
+      }
+
+      .sidebar .textoCategory{
+        padding-left: 20px;
+      }
+
+      .sidebar.visible .textoCategory{
+        display: none;
+        transition: 0.3s;
       }
 
 
@@ -2534,8 +2542,8 @@
 
             <div class="barra-label">
               <div class="label">
-                <span class="category" style="padding-left: 10px;">
-                  Categorías <i class="fas fa-chevron-right arrow1" style="cursor: pointer;"></i>
+                <span class="category">
+                  <span class="textoCategory">Categorías</span>  <i class="fas fa-chevron-right arrow1" style="cursor: pointer;"></i>
                 </span>
               </div>
             </div>
