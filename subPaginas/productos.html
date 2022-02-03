@@ -1412,18 +1412,16 @@
 
       }
       
-    
-      
       .sidebar .barra-label{
         display: flex;
+        justify-content: end;
         width: 100%;
         padding-left: 130px;
-        transition: all 0.3s ease;
-        justify-content: end;
+        transition: 0.3s;
       }
 
       .sidebar .barra-label.invisible{
-        padding-left: 40px;
+        padding-left: 0px;
         background: #425363;
         filter: brightness(85%);
       }
@@ -2537,7 +2535,7 @@
             <div class="barra-label">
               <div class="label">
                 <span class="category">
-                  Categorías <i class="fas fa-chevron-right arrow1"></i>
+                  Categorías <i class="fas fa-chevron-right arrow1" style="cursor: pointer;"></i>
                 </span>
               </div>
             </div>
