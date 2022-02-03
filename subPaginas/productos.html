@@ -1379,22 +1379,25 @@
       html body .mifondo .sidebar{
         display: block;
         position: fixed;
+        width: 60%;
+        height: 100%;
         top: 40px;
         left: -60%;
         z-index: 999;
-        height: 100%;
-        width: 60%;
         min-width: 210px;
         background: #425363;
+
+
         right: 100%;
         transition: 0.3s;
         
       }
 
-      
+      .mifondo .sidebar.visible{
+        left: 0;
+      }
 
-      
-      html body .mifondo .sidebar .logo-details{
+      .mifondo .sidebar .logo-details{
         height: 100px;
         width: 100%;
         display: flex;
@@ -1409,19 +1412,20 @@
 
       }
       
-      .top-div{
-        display: flex;
-        flex-direction: row; 
-        justify-content: space-between; 
-        width: 100%;
-      }
+    
       
       .sidebar .barra-label{
         display: flex;
         width: 100%;
-        padding-left: 260px;
+        padding-left: 130px;
         transition: all 0.3s ease;
         justify-content: end;
+      }
+
+      .sidebar .barra-label.invisible{
+        padding-left: 40px;
+        background: #425363;
+        filter: brightness(85%);
       }
 
       
@@ -1451,12 +1455,6 @@
         border-radius: 0px 10px 10px 0;
       }
 
-    
-      .sidebar .barra-label.invisible{
-        padding-left: 40px;
-        background: #425363;
-        filter: brightness(85%);
-      }
 
       .mifondo .sidebar .arrow1.visible{
         
@@ -1464,16 +1462,14 @@
         transition: all 0.3s ease;
       }
 
-      html body .mifondo .sidebar.visible{
-        left: 0;
-      }
+     
 
-      html body .mifondo .sidebar .barra-busqueda{
+      .mifondo .sidebar .barra-busqueda{
         padding-top: 5px;
         padding-left: 20px;
       }
 
-      html body .mifondo .sidebar .logo-details .logo-name{
+      .mifondo .sidebar .logo-details .logo-name{
         font-size: 18px;
         max-width: 200px;
         font-weight: 600;
@@ -1497,18 +1493,19 @@
       }
 
       .sidebar .nav-links li a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
         padding-top: 10px;
         padding-bottom: 10px;
         color: #fff;
       }
 
-      html body .mifondo .sidebar .nav-links{
-        height: 100%;
-        padding-top: 0px;
-        padding-left: 0px;
-        
-      }
+      
       .sidebar .nav-links li .iocn-link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         position: relative;
         list-style: none;
         transition: all 0.4s ease;
@@ -1518,14 +1515,6 @@
         background: #425363;
         filter: brightness(85%);
       }
-
-      .sidebar .nav-links li .iocn-link{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-      }
-      
 
       .sidebar .nav-links li i{
         height: 50px;
@@ -1540,11 +1529,8 @@
       .sidebar .nav-links li.showMenu i.arrow{
         transform: rotate(-180deg);
       }
-      .sidebar .nav-links li a{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-      }
+
+  
 
       .sidebar .nav-links li .sub-menu{
         padding-left: 30px;
@@ -1578,7 +1564,7 @@
         opacity: 1;
       }
 
-      .sidebar.close .nav-links li .sub-menu .link_name{
+      .sidebar.close .link_name{
         font-size: 18px;
         opacity: 1;
       }
@@ -2551,51 +2537,50 @@
             <div class="barra-label">
               <div class="label">
                 <span class="category">
-                  Categorías<i class="fas fa-chevron-right arrow1"></i>
+                  Categorías <i class="fas fa-chevron-right arrow1"></i>
                 </span>
-                
               </div>
             </div>
             
 
-            <div class="top-div">
 
-              <div class="logo-details">
-  
-                <div class="logo-name">
-                  <span >Categorías de Productos</span>
-                </div>
-                
-  
-                <div class="barra-busqueda">
-                  <div class="box">
-                    <div class="content">
-                      <div id="k2ModuleBox116" class="k2SearchBlock">
-                        <form
-                          action="/index.php/component/k2/itemlist/search"
-                          method="get"
-                          autocomplete="off"
-                          class="k2SearchBlockForm"
-                        >
-                          <input
-                            type="text"
-                            value="Buscar"
-                            name="searchword"
-                            maxlength="20"
-                            size="15"
-                            alt="Buscar"
-                            class="inputbox"
-                            onblur="if(this.value=='') this.value='Buscar';"
-                            onfocus="if(this.value=='Buscar') this.value='';"
-                          />
-                        </form>
-                      </div>
+            <div class="logo-details">
+
+              <div class="logo-name">
+                <span >Categorías de Productos</span>
+              </div>
+              
+
+              <div class="barra-busqueda">
+                <div class="box">
+                  <div class="content">
+                    <div id="k2ModuleBox116" class="k2SearchBlock">
+                      <form
+                        action="/index.php/component/k2/itemlist/search"
+                        method="get"
+                        autocomplete="off"
+                        class="k2SearchBlockForm"
+                      >
+                        <input
+                          type="text"
+                          value="Buscar"
+                          name="searchword"
+                          maxlength="20"
+                          size="15"
+                          alt="Buscar"
+                          class="inputbox"
+                          onblur="if(this.value=='') this.value='Buscar';"
+                          onfocus="if(this.value=='Buscar') this.value='';"
+                        />
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-           
+
             </div>
+           
+           
 
             
 
