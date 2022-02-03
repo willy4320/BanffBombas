@@ -1379,14 +1379,20 @@
       html body .mifondo .sidebar{
         display: block;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 40px;
+        right: 100%;
         z-index: 999;
         height: 100%;
         width: 60%;
         min-width: 210px;
         background: #425363;
+        right: 100%;
+        transition: 0.3s;
         
+      }
+
+      html body .mifondo .sidebar.visible{
+        right: 40%;
       }
 
       
@@ -1405,6 +1411,60 @@
 
       }
       
+      .top-div{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between; 
+        width: 100%;
+      }
+      
+      .sidebar .barra-label{
+        display: flex;
+        width: 100%;
+        padding-left: 130px;
+        transition: all 0.3s ease;
+        justify-content: end;
+      }
+
+      .sidebar .barra-label.invisible{
+        padding-left: 30px;
+        border-radius: 0 12px 12px 0;
+        background: #425363;
+        filter: brightness(85%);
+      }
+      .sidebar .label{
+        display: flex;
+        align-items: center;
+      }
+
+      .sidebar .category{
+        color: #fff;
+        background: #425363;
+        display: flex;
+        align-items: center;
+        height: 55px;
+        padding-left: 20px;
+      }
+
+
+      .mifondo .sidebar .arrow1{
+        height: 15px;
+        color: #fff;
+        background: #425363;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 22px;
+        border-radius: 0px 10px 10px 0;
+      }
+
+
+      .mifondo .sidebar .arrow1.visible{
+        transform: rotate(180deg);
+        border-radius: 10px 30px 30px 10px;
+        transition: all 0.3s ease;
+      }
+
       html body .mifondo .sidebar .barra-busqueda{
         padding-top: 5px;
         padding-left: 20px;
@@ -1412,6 +1472,7 @@
 
       html body .mifondo .sidebar .logo-details .logo-name{
         font-size: 18px;
+        max-width: 200px;
         font-weight: 600;
         color: #fff;
         padding-top: 5px;
@@ -2483,41 +2544,54 @@
         <div class="mifondo">
         
           <div class="sidebar">
+
+            <div class="barra-label">
+              <div class="label">
+                <span class="category">
+                  Categorías
+                </span>
+                <i class="fas fa-chevron-right arrow1"></i>
+              </div>
+            </div>
             
 
-            <div class="logo-details">
+            <div class="top-div">
 
-              <div class="logo-name">
-                <span >Categorías de Productos</span>
-              </div>
-              
-
-              <div class="barra-busqueda">
-                <div class="box">
-                  <div class="content">
-                    <div id="k2ModuleBox116" class="k2SearchBlock">
-                      <form
-                        action="/index.php/component/k2/itemlist/search"
-                        method="get"
-                        autocomplete="off"
-                        class="k2SearchBlockForm"
-                      >
-                        <input
-                          type="text"
-                          value="Buscar"
-                          name="searchword"
-                          maxlength="20"
-                          size="15"
-                          alt="Buscar"
-                          class="inputbox"
-                          onblur="if(this.value=='') this.value='Buscar';"
-                          onfocus="if(this.value=='Buscar') this.value='';"
-                        />
-                      </form>
+              <div class="logo-details">
+  
+                <div class="logo-name">
+                  <span >Categorías de Productos</span>
+                </div>
+                
+  
+                <div class="barra-busqueda">
+                  <div class="box">
+                    <div class="content">
+                      <div id="k2ModuleBox116" class="k2SearchBlock">
+                        <form
+                          action="/index.php/component/k2/itemlist/search"
+                          method="get"
+                          autocomplete="off"
+                          class="k2SearchBlockForm"
+                        >
+                          <input
+                            type="text"
+                            value="Buscar"
+                            name="searchword"
+                            maxlength="20"
+                            size="15"
+                            alt="Buscar"
+                            class="inputbox"
+                            onblur="if(this.value=='') this.value='Buscar';"
+                            onfocus="if(this.value=='Buscar') this.value='';"
+                          />
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+           
             </div>
 
             
@@ -2851,10 +2925,23 @@
           </div>
           <script>
             let arrow = document.querySelectorAll(".arrow");
+            let arrow1 = document.querySelectorAll(".arrow1");
+
             for (var i = 0; i < arrow.length; i++) {
               arrow[i].addEventListener("click", (e)=>{
                 let arrowParent = e.target.parentElement.parentElement;
                 arrowParent.classList.toggle("showMenu");
+              });
+            }
+
+            for (var i = 0; i < arrow1.length; i++) {
+              arrow1[i].addEventListener("click", (e)=>{
+                let arrowParent1 = e.target.parentElement.parentElement.parentElement;
+                let arrowParent2 = e.target.parentElement.parentElement;
+                let arrowParent3 = e.target;
+                arrowParent1.classList.toggle("visible");
+                arrowParent2.classList.toggle("invisible");
+                arrowParent3.classList.toggle("visible");
               });
             }
           </script>
