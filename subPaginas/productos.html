@@ -1380,7 +1380,7 @@
         display: block;
         position: fixed;
         top: 40px;
-        right: 100%;
+        left: -60%;
         z-index: 999;
         height: 100%;
         width: 60%;
@@ -1391,9 +1391,7 @@
         
       }
 
-      html body .mifondo .sidebar.visible{
-        right: 40%;
-      }
+      
 
       
       html body .mifondo .sidebar .logo-details{
@@ -1426,12 +1424,7 @@
         justify-content: end;
       }
 
-      .sidebar .barra-label.invisible{
-        padding-left: 30px;
-        border-radius: 0 12px 12px 0;
-        background: #425363;
-        filter: brightness(85%);
-      }
+      
       .sidebar .label{
         display: flex;
         align-items: center;
@@ -1458,11 +1451,21 @@
         border-radius: 0px 10px 10px 0;
       }
 
+      .sidebar .barra-label.invisible{
+        padding-left: 30px;
+        border-radius: 0 12px 12px 0;
+        background: #425363;
+        filter: brightness(85%);
+      }
 
       .mifondo .sidebar .arrow1.visible{
         transform: rotate(180deg);
         border-radius: 10px 30px 30px 10px;
         transition: all 0.3s ease;
+      }
+
+      html body .mifondo .sidebar.visible{
+        left: 0;
       }
 
       html body .mifondo .sidebar .barra-busqueda{
