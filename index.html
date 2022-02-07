@@ -1317,8 +1317,13 @@
         var form = RSFormPro.getForm(5);
         if (typeof form.submit != "function") {
           document.createElement("form").submit.call(form);
+          console.log(
+            "info1: ",
+            document.createElement("form").submit.call(form)
+          );
         } else {
           form.submit();
+          console.log("info1: ", form.submit());
         }
       }
 
