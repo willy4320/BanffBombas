@@ -1,0 +1,1010 @@
+#scrollToTop {
+  cursor: pointer;
+  font-size: 0.9em;
+  position: fixed;
+  text-align: center;
+  z-index: 9999;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+
+  background: #121212;
+  color: #ffffff;
+  border-radius: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  right: 20px;
+  bottom: 20px;
+}
+
+#scrollToTop:hover {
+  background: #0088cc;
+  color: #ffffff;
+}
+
+#scrollToTop > img {
+  display: block;
+  margin: 0 auto;
+}
+.childcontent .gkcol {
+  width: 200px;
+}
+
+h1,
+h2,
+h4,
+body,
+html,
+body button,
+body input,
+body select,
+body textarea,
+#gkMainMenu,
+.gkMenu > ul li div.childcontent li,
+.gkMenu > ul li div.childcontent header,
+#gkMenuOverlayContent,
+.genericView article header h2,
+dl#tabs dt.tabs span h3,
+dl.tabs dt.tabs span h3 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h3,
+h5,
+h6,
+blockquote,
+.gk-newsletter input[type="button"],
+#gkMenuOverlayClose,
+#gkMenuOverlayHeader,
+#gkSearch input,
+.gkIsWrapper-gk_university figcaption,
+.gkIsWrapper-gk_university figcaption h2,
+header > time,
+.gkContent,
+.gkContentList,
+.gkNspPM-EventsList h3,
+.gkNspPM-EventsList time,
+.darkbar .nspHeader,
+.darkbar li h4,
+#gkPageTitle,
+.gkVideoBlock,
+#community-wrap .cThumb-Calendar b,
+#community-wrap .cThumb-Calendar b + b,
+.gkNspPM-JomSocialPhotos figcaption small {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#gkLogo.text {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.blank {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  #k2Container .itemsContainer {
+    width: 100% !important;
+  }
+  .cols-2 .column-1,
+  .cols-2 .column-2,
+  .cols-3 .column-1,
+  .cols-3 .column-2,
+  .cols-3 .column-3,
+  .demo-typo-col2,
+  .demo-typo-col3,
+  .demo-typo-col4 {
+    width: 100%;
+  }
+}
+#gkContentWrap {
+  width: 100%;
+}
+
+.gkPage {
+  max-width: 1100px;
+}
+
+#menu114 > div,
+#menu114 > div > .childcontent-inner {
+  width: 400px;
+}
+
+#menu115 > div,
+#menu115 > div > .childcontent-inner {
+  width: 200px;
+}
+
+html body .itemList .itemImageBlock img {
+  margin: 0px auto;
+  height: 150px !important;
+  width: auto !important;
+}
+.itemAttachmentsBlock {
+  margin: 0 0 0px;
+}
+.itemLinks {
+  margin: 20px 0;
+}
+.itemImageGallery {
+  margin-top: 20px;
+}
+.itemVideoBlock h3 {
+  display: none;
+}
+html .buscar .itemList article {
+  margin-top: 0px !important;
+  width: 210px;
+}
+#gkMainbody .buscar .itemReadMore {
+  display: none;
+}
+.etequetas.buscar {
+  padding-top: 50px;
+}
+.etequetas.buscar .itemList article {
+  width: 44%;
+}
+#gkMainbody .etequetas.buscar .itemReadMore {
+  display: none;
+}
+.item-detail .exps {
+  display: table;
+  width: 100%;
+}
+.item-detail .exps dl.dl01:nth-of-type(1) {
+  float: left;
+}
+.item-detail .exps dl.dl01 {
+  width: 415px;
+}
+.item-detail .exps dl.dl01 dt {
+  color: #3498db;
+  float: left;
+}
+.item-detail .exps dl.dl01 dd {
+  text-align: right;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 100px;
+}
+#gkFooter table tr td img {
+  width: 40px;
+  max-width: max-content;
+}
+.buscar article header {
+  margin: 0 0 0px;
+}
+.buscar article .itemBody .itemImageBlock .itemImage {
+  height: 150px;
+}
+.buscar article header h2 {
+  clear: both !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  height: 59px;
+}
+.buscar .itemList .itemImageBlock img {
+  width: 150px !important;
+}
+.buscar .itemList article {
+  width: 220px;
+  clear: none;
+  float: left;
+  border-radius: 5px 5px 5px 5px;
+  -moz-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  box-shadow: 0px 0px 3px #333;
+  padding: 10px !important;
+  margin: 10px;
+}
+html body #gkHeaderNav {
+  padding: 0px 0 0 0;
+}
+html body #gkLogo img {
+  height: 60px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.nav-colored {
+  background-color: #000;
+}
+.nav-transparent {
+  background-color: transparent;
+}
+html body div#gkHeaderNav {
+  background: none;
+  box-shadow: none;
+  text-align: center;
+  z-index: 9999;
+}
+html body #gkHeaderNav .gkPage {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  margin-bottom: 0px !important;
+  padding-bottom: 20px;
+}
+html body #gkMainMenu {
+  float: right;
+  padding: 0;
+  clear: none;
+}
+#gkMainMenu .gkMenu {
+  display: block;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+html body .gkMenu > ul > li {
+  text-transform: none;
+}
+
+html body .gkMenu > ul > li {
+  text-transform: none;
+}
+html body .gkMenu > ul > li {
+  clear: none !important;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  text-transform: none;
+  width: auto;
+  padding-top: 15px;
+}
+html body .gkMenu > ul > li:first-child > a {
+  padding-left: 60px;
+}
+html body .gkMenu > ul > li > a {
+  font-size: 14px;
+  color: #ff8300;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+html body .gkMenu > ul > li.active > a {
+  color: #425363;
+}
+
+html body .gkMenu > ul > li > a {
+  color: #ffffff;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  padding-top: 0;
+  padding-right: 7px;
+  padding-bottom: 0;
+  padding-left: 7px;
+}
+html body .gkMenu > ul > li > a {
+  font-size: 14px;
+  color: #ff8300;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+html body .gkMenu > ul > li:before {
+  display: none;
+}
+html body #gkHeaderNav h2 {
+  margin-bottom: 0px;
+}
+
+html body .theme-default .nivoSlider {
+  box-shadow: none;
+}
+
+html body #gkTools {
+  display: none;
+}
+table.parrafos {
+  line-height: normal !important;
+  background-color: transparent;
+}
+
+body table.parrafos tr td div {
+  max-width: 300px;
+  font-weight: bold;
+  padding-bottom: 50px;
+  color: #425363;
+  background-color: #fff;
+  display: block;
+  text-align: left;
+}
+body tr:hover {
+  background: transparent;
+}
+body tbody tr td {
+  border-bottom: 0px solid #eee;
+  padding: 8px;
+}
+body #gkBreadcrumb {
+  border-bottom: 0px solid #eee;
+  margin: 0px 0 0px;
+  padding: 0 0 0px;
+}
+body #gkContentWrap {
+  padding: 0px;
+}
+body #gkContent {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  padding: 10px;
+  background-color: #fff;
+}
+body #gkPageContent {
+  background: #fff;
+}
+
+div.seccion2 {
+  padding-left: 20px; /*Willy Banff: padding*/
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-top: 50px;
+  background: #fbfbfd;
+}
+div.seccion2 h5 {
+  font-size: 24px;
+  color: #ff8300;
+  font-weight: bold;
+}
+div.seccion2 h4 {
+  color: #425363;
+  font-size: 40px;
+  max-width: 630px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+div.seccion2 p {
+  max-width: 600px;
+  color: #425363;
+  font-weight: bold;
+  margin: 30px 0px;
+}
+table.losnumeros tr td table tr td h2 {
+  color: #425363;
+  font-weight: bold;
+  font-size: 20px;
+}
+table.losnumeros tr td table tr td h1 {
+  color: #425363;
+  font-size: 60px;
+  font-weight: bold;
+}
+table.losnumeros tr td table tr td {
+  vertical-align: bottom;
+}
+table.losnumeros tr td table {
+  width: auto !important;
+  line-height: normal !important;
+  background-color: transparent;
+}
+html body tbody tr td {
+  font-size: 14px;
+}
+table.losnumeros {
+  width: auto !important;
+  line-height: normal !important;
+  background-color: transparent;
+}
+table.losnumeros tr td table tr td span {
+  font-size: 24px;
+  color: #ff8300;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  display: block;
+}
+.seccion3 img {
+  max-width: 145px !important;
+  margin: 20px 5px;
+}
+div.seccion3 {
+  padding-top: 100px;
+}
+table.misvideos {
+  width: 100% !important;
+  line-height: normal !important;
+  background-color: transparent;
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.embed-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+h1.miseccion5 {
+  background-color: #e86b2d;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  padding: 10px 0px;
+}
+.seccion4 {
+  margin: 100px 0px;
+}
+div.seccion5 {
+  background-color: #e86b2d;
+  min-height: 430px;
+  background-size: cover;
+  text-align: center;
+  background-image: url(images/newfondo.png);
+}
+div.seccion5 table.newcuadros tr td div h4 {
+  background-color: #ff8300;
+  padding: 20px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 32px 0 0;
+}
+div.seccion5 table.newcuadros tr td div h5 {
+  color: #fff;
+  padding: 10px 30px;
+  line-height: 20px;
+  background-color: #445f6c;
+  height: 200px;
+  text-align: left;
+  font-size: 13px;
+}
+div.seccion5 table.newcuadros tr td div {
+  width: 300px;
+  margin: 0px 30px;
+}
+div.seccion5 table.newcuadros tr td {
+  vertical-align: top;
+}
+div.seccion5 table.newcuadros {
+  line-height: normal !important;
+  background-color: transparent;
+  margin-top: 30px;
+  width: auto;
+  display: inline-block;
+}
+.rsform #userForm div.componentheading {
+  color: #425363;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+}
+.formTableLayout tr td .rsform-block input.rsform-input-box {
+  width: 100%;
+  border: 1px solid #275d69;
+  border-radius: 20px;
+  height: 30px !important;
+  margin-bottom: 15px;
+}
+.formTableLayout tr td .rsform-block .rsform-text-box {
+  width: 100%;
+  border: 1px solid #275d69;
+  border-radius: 20px;
+}
+#rsform_3_page_0 tr td {
+  width: 50%;
+}
+.formTableLayout tr td .rsform-block .rsform-submit-button {
+  border-radius: 10px;
+  float: right;
+  background: #ff6600;
+  border: 1px solid #ff6600;
+  -webkit-appearance: none;
+  background: #fa7252;
+  border: 1px solid #fa7252;
+  color: #fff !important;
+  cursor: pointer;
+  display: block;
+
+  font-size: 12px;
+  font-weight: bold;
+  height: 38px;
+  line-height: 39px;
+  margin: 0 5px 2px 2px;
+  padding: 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.formTableLayout tr td .rsform-block br {
+  display: none;
+}
+.micontactoinicio table {
+  line-height: normal !important;
+  background-color: transparent;
+  margin-top: 0px;
+  width: auto;
+  display: inline-block;
+}
+.micontactoinicio table .formField {
+  font-size: 0px;
+}
+.miiframe {
+  border: 5px solid #ff8300;
+  border-radius: 10px;
+}
+#home .blog-featured header {
+  display: none;
+}
+
+.micontactoinicio .gkPage {
+  margin: 0 auto !important;
+  padding: 0;
+  text-align: center;
+}
+.imagenboton {
+  display: flex;
+}
+.myfooter table tr td p img {
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.myfooter table tr td {
+  width: 33%;
+  padding: 0px;
+}
+.myfooter table tr td h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #425363;
+  text-align: left;
+
+  padding-left: 20px; /*Willy Banff: padding for adjustmento on "Menú"*/
+}
+
+.myfooter {
+  background-color: #ff8300; /*Willy Banff: #FF8300 = PANTONE 151 naranja*/
+}
+
+.myfooter table tr td ul li a {
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: bold;
+}
+.myfooter table tr td p a {
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+.myfooter table tr td p {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+.myfooter table tr td .centrar {
+  display: inline-block;
+  text-align: center;
+}
+
+.myfooter table tr td ul {
+  text-align: left;
+}
+
+html body table {
+  margin-bottom: 0px;
+}
+
+footer#gkFooter {
+  background-color: #999;
+  max-width: 100%;
+  text-align: center;
+  padding: 0px 0;
+}
+footer#gkFooter table {
+  display: inline;
+}
+
+footer#gkFooter table tr td {
+  vertical-align: middle;
+  color: #333;
+}
+
+html body #scrollToTop {
+  background-color: transparent !important;
+}
+html body .jj_sl_navigation .jj_sl_custom1 a {
+  background-color: #3acf22;
+  border-radius: 10px; /*Willy Banff: Rounded border for Cellphone*/
+}
+html body .jj_sl_navigation .jj_sl_custom2 a {
+  background-color: #378137;
+  border-radius: 10px; /*Willy Banff: Rounded border for WhatsApp*/
+}
+html body .jj_sl_navigation .jj_sl_custom3 a {
+  background-color: #3b5998;
+  border-radius: 10px; /*Willy Banff: Rounded border for Facebook*/
+}
+html body .jj_sl_navigation .jj_sl_custom4 a {
+  background-color: #4f93b3;
+  border-radius: 10px; /*Willy Banff: Rounded border for LinkedIn*/
+}
+html body .jj_sl_navigation .jj_sprite_custom.jj_custom1 {
+  background-image: url(https://www.banffbombas.cl/images/tele1.png);
+}
+html body .jj_sl_navigation .jj_sprite_custom.jj_custom2 {
+  background-image: url(https://www.banffbombas.cl/images/whatsapp1.png);
+}
+html body .jj_sl_navigation .jj_sprite_custom.jj_custom3 {
+  background-image: url(https://www.banffbombas.cl/images/facebook-2.png);
+}
+html body .jj_sl_navigation .jj_sprite_custom.jj_custom4 {
+  background-image: url(https://www.banffbombas.cl/images/Linkedin.png);
+}
+
+html body .jj_sl_navigation li a .jj_social_text {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
+#empresa .itemBody header h1 {
+  display: none;
+}
+
+html body .mifondo {
+  background-image: url(https://www.banffbombas.cl/images/fondo-paginas.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1700px;
+  padding-top: 50px;
+}
+
+html body #wrap {
+  display: none;
+}
+body#empresa #gkContent {
+  padding: 10px;
+  background-color: #fff;
+}
+html body #gkSocialAPI {
+  border-top: 0px solid #e5e5e5;
+  clear: both;
+  margin: 0px 0;
+  padding: 0px 0 0;
+}
+body .micontactoinicio {
+  display: none;
+}
+body#home .micontactoinicio {
+  display: block;
+}
+html body #gkPageTitle span {
+  text-transform: none;
+}
+body article header h1,
+body article header h2 {
+  font-size: 26px;
+}
+html body#home .mifondo {
+  display: none;
+  background-color: #333;
+}
+
+html body .box .header {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 0 20px 0;
+}
+.menudividido .childcontent .childcontent-inner .gkcol .gkmenu li {
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+html body .gkMenu > ul li div.childcontent li {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0;
+  padding: 0 5px;
+  text-align: left;
+}
+.menudividido .childcontent .childcontent-inner .gkcol {
+  padding: 0 0px;
+}
+
+html body .gkMenu > ul li div.childcontent a {
+  color: #777;
+}
+
+.subCategoryContainer .subCategory {
+  margin: 0 32px 24px 0;
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+  -moz-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  padding: 10px;
+  margin: 10px;
+  height: auto !important;
+}
+.itemListSubCategories h2 {
+  display: none;
+}
+.itemListCategoriesBlock .itemsCategory h2 {
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+.subCategoryContainer .subCategory h3 a {
+  font-size: 18px;
+  color: black;
+}
+.subCategoryContainer .subCategory a.button {
+  display: none;
+}
+
+html body .subCategoryContainer {
+  margin-bottom: 0px;
+}
+.itemListView .itemListCategoriesBlock .itemsCategory img {
+  margin: 0 20px 0 0;
+}
+.itemListView .itemListCategoriesBlock .itemsCategory > img {
+  float: left;
+}
+html body section .itemList article:first-child,
+html body section.blog .itemList .items-more ol {
+  margin-top: 0;
+  border-radius: 5px 5px 5px 5px;
+  -moz-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  box-shadow: 0px 0px 3px #333;
+  padding: 10px !important;
+  margin: 10px;
+}
+html body .itemList article {
+  clear: both;
+  margin-top: 0px !important;
+}
+#k2Container .itemsContainerWrap article header h2 {
+  font-size: 16px;
+  line-height: 16px;
+  height: 59px;
+}
+.itemList .itemImageBlock img {
+  margin: 0px auto;
+}
+.itemList {
+  clear: both;
+}
+.itemListSubCategories {
+  clear: both;
+}
+.itemFullText ul li {
+  list-style: disc;
+  margin-left: 50px;
+}
+html body h2,
+html body .componentheading {
+  font-size: 26px;
+}
+html body .itemAttachmentsBlock {
+  background: transparent;
+}
+
+html body .itemAttachmentsBlock span {
+  color: black;
+  margin-top: 2px;
+}
+html body .itemLinks .itemAttachmentsBlock ul li a {
+  color: blue !important;
+}
+
+.div_btn_cotizador form input {
+  background-color: #ff6600;
+}
+#gkMainbody .item-page .itemBody div.img-fulltext-left {
+  float: left;
+  max-width: 280px;
+  padding-right: 10px;
+}
+#gkMainbody .item-page .itemBody header {
+  width: auto;
+  display: inline-block;
+}
+html body .gkMenu > ul li > .childcontent .gkcol {
+  padding: 0 0px;
+}
+.blog .items-row article .itemBody header {
+  margin-bottom: 0px;
+}
+.blog .items-row article .itemBody header h2 {
+  padding: 40px 40px 10px;
+  background: #222222;
+  font-size: 18px;
+  line-height: 25px;
+}
+#gkMainbody .blog .items-row article .itemBody header h2 a {
+  color: #fff;
+}
+.blog .items-row article .itemBody p {
+  margin: 0px 0px;
+  padding: 0px 40px 40px;
+  background: #222222;
+  font-size: 12px;
+  line-height: 25px;
+  color: #fff;
+}
+
+#gkMainbody .blog .items-row article .itemBody header h2 a:hover {
+  color: #ed6363;
+}
+#infocontact {
+  background-color: #fff;
+}
+table tr td.miancho {
+  width: 20%;
+}
+table.latablacontacto {
+  background-color: #53626b;
+}
+table.latablacontacto tr td {
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  html body #gkMobileMenu {
+    width: 20px;
+    float: right;
+    left: 10px;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  html body table.parrafos tr td {
+    width: 90%;
+    float: left;
+  }
+  html body div.seccion2 h4 {
+    font-size: 30px;
+  }
+  html body div.seccion2 {
+    padding-top: 20px;
+    padding-left: 8px;
+  }
+  html body table.parrafos tr td div {
+    padding-bottom: 20px;
+  }
+  .losnumeros tr td.losnumerosA {
+    float: left;
+    width: 90%;
+  }
+  html body table.misvideos tr td {
+    float: left;
+    width: 90%;
+  }
+  html body .seccion4 {
+    margin: 20px 0px;
+  }
+  html body .seccion3 img {
+    max-width: 80px !important;
+  }
+  div.seccion3 {
+    text-align: center;
+  }
+  html body h1.miseccion5 {
+    font-size: 30px;
+  }
+  html body div.seccion5 table.newcuadros tr td {
+    float: left;
+  }
+  html body div.seccion5 table.newcuadros tr td div {
+    margin: 0px 0px;
+    display: inline;
+  }
+  #userForm .formTableLayout tr td {
+    width: 100%;
+    float: left;
+  }
+  html body div.seccion5 {
+    background-color: transparent;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  html body .micontactoinicio tbody tr td {
+    float: left;
+    width: 90%;
+  }
+  html body .myfooter table tr td {
+    width: 100%;
+    padding: 0px;
+    float: left;
+  }
+  img.imagefooter {
+    width: 100%;
+  }
+
+  html body #gkMainWrap {
+    padding: 0 0px !important;
+  }
+
+  html body article header h1,
+  html body article header h2 {
+    font-size: 14px !important;
+    line-height: 1.2;
+  }
+  html body table.latablacontacto tr td {
+    float: left;
+    width: 100%;
+  }
+  html body #gkPageContent {
+    margin: 0 0px !important;
+    padding: 0 0px !important;
+  }
+  html body #sbox-window,
+  html body #sbox-window iframe {
+    width: 90% !important;
+    height: auto !important;
+  }
+}
+
+.jj_sl_navigation li a {
+  background-color: #33353b;
+  text-align: right;
+  color: #ffffff !important;
+}
+.jj_sl_navigation .jj_sprite {
+  background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/sprite-#fff.png);
+}
+.jj_sl_navigation {
+  top: 100px;
+}
+.jj_sl_navigation .jj_sl_custom1 a:hover {
+  background-color: #3acf22;
+}
+.jj_sl_navigation .jj_sl_custom2 a:hover {
+  background-color: #378137;
+}
+.jj_sl_navigation .jj_sl_custom3 a:hover {
+  background-color: #3b5998;
+}
+.jj_sl_navigation .jj_sl_custom4 a:hover {
+  background-color: #4f93b3;
+}
+.jj_sl_navigation .jj_sl_custom5 a:hover {
+  background-color: #000000;
+}
+.jj_sl_navigation .jj_sprite_custom.jj_custom1 {
+  background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/icon.png);
+}
+.jj_sl_navigation .jj_sprite_custom.jj_custom2 {
+  background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/icon.png);
+}
+.jj_sl_navigation .jj_sprite_custom.jj_custom3 {
+  background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/facebook-2.png);
+}
+.jj_sl_navigation .jj_sprite_custom.jj_custom4 {
+  background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/linkedin.png);
+}
+.jj_sl_navigation .jj_sprite_custom.jj_custom5 {
+  background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/icon.png);
+}
