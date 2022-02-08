@@ -1,0 +1,343 @@
+/*Willy Banff: Cuerpo Productos y barra categirias START*/
+.mifondo .gkPage {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+body .sidebar {
+  display: none;
+}
+
+.mifondo .box1 {
+  width: 260px;
+  height: 100%;
+  z-index: 999;
+  background: #425363;
+}
+
+.box1 .nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.box1 .category {
+  color: #fff;
+  background: #425363;
+  display: flex;
+  align-items: center;
+}
+
+.box1 .textoCategory {
+  padding-left: 20px;
+}
+
+.mifondo .box1 .logo-details {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  align-items: left;
+  background: #425363;
+  filter: brightness(85%);
+}
+
+.mifondo .box1 .barra-busqueda {
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+.mifondo .box1 .logo-details .logo-name {
+  font-size: 18px;
+  max-width: 200px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+.box1 .nav-links {
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+  background: #425363;
+}
+
+.box1 .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.box1 .nav-links li .iocn-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.box1 .nav-links li .iocn-link:hover {
+  background: #425363;
+  filter: brightness(85%);
+}
+
+.box1 .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.box1 .nav-links li .arrow3 {
+  cursor: pointer;
+}
+
+.box1 .nav-links li.showMenu i.arrow3 {
+  transform: rotate(-180deg);
+}
+
+.box1 .nav-links li .sub-menu {
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  word-break: normal;
+  margin-top: -10px;
+  background: #425363;
+  filter: brightness(85%);
+  display: none;
+}
+
+.box1 .nav-links li.showMenu .sub-menu {
+  display: block;
+}
+
+.box1 .nav-links li .sub-menu a {
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 0px;
+  max-width: 20px;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.box1 .nav-links li .sub-menu a:hover {
+  opacity: 1;
+}
+
+.box1.close .link_name {
+  font-size: 18px;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mifondo section .box1 {
+    display: none;
+  }
+
+  .mifondo .sidebar {
+    display: block;
+    position: fixed;
+    width: 260px;
+    height: 100%;
+    top: 40px;
+    z-index: 999;
+    background: #425363;
+
+    left: -260px;
+    transition: 0.3s;
+  }
+
+  .mifondo .sidebarVisible {
+    left: 0;
+  }
+
+  .sidebar .barra-label {
+    display: flex;
+    flex-direction: row-reverse;
+    background: #425363;
+    width: 400px;
+    height: 55px;
+    transition: 0.3s;
+  }
+
+  .sidebar.sidebarVisible .barra-label {
+    width: 305px;
+    filter: brightness(85%);
+  }
+
+  .sidebar .category {
+    color: #fff;
+    background: #425363;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar .textoCategory {
+    padding-left: 20px;
+  }
+
+  .sidebar.sidebarVisible .textoCategory {
+    display: none;
+  }
+
+  .mifondo .sidebar .arrow1 {
+    color: #fff;
+    background: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .mifondo .sidebar .arrowVisible {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+  }
+
+  .mifondo .sidebar .logo-details {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    align-items: left;
+    background: #425363;
+    filter: brightness(85%);
+  }
+
+  .mifondo .sidebar .barra-busqueda {
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+
+  .mifondo .sidebar .logo-details .logo-name {
+    font-size: 18px;
+    max-width: 200px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+
+  .sidebar .nav-links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+    background: #425363;
+  }
+
+  .sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+  }
+
+  .sidebar .nav-links li .iocn-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+
+  .sidebar .nav-links li .iocn-link:hover {
+    background: #425363;
+    filter: brightness(85%);
+  }
+
+  .sidebar .nav-links li i {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar .nav-links li.showMenu i.arrow {
+    transform: rotate(-180deg);
+  }
+
+  .sidebar .nav-links li .sub-menu {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    word-break: normal;
+    margin-top: -10px;
+    background: #425363;
+    filter: brightness(85%);
+    display: none;
+  }
+
+  .sidebar .nav-links li.showMenu .sub-menu {
+    display: block;
+  }
+
+  .sidebar .nav-links li .sub-menu a {
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 0px;
+    max-width: 20px;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar .nav-links li .sub-menu a:hover {
+    opacity: 1;
+  }
+
+  .sidebar.close .link_name {
+    font-size: 18px;
+    opacity: 1;
+  }
+}
+/*Willy Banff: Cuerpo Productos y barra categirias START*/
+
+/*Willy Banff: Cuerpo servicios START*/
+.cuerpo-servicio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.cuerpo-servicio .item-servicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 350px;
+  height: auto;
+  padding: 20px 0px;
+}
+
+.cuerpo-servicio .item-servicio .logo-servicio {
+  width: 120px;
+  height: 120px;
+}
+
+.cuerpo-servicio .item-servicio .descripcion-servicio span {
+  display: flex;
+  font-size: 16px;
+  max-width: 150px;
+  word-break: normal;
+}
+/*Willy Banff: Cuerpo servicios END*/

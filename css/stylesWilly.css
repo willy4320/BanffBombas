@@ -1,4 +1,4 @@
-/**Willy Banff: barra principal START**/
+/*Willy Banff: barra principal START*/
 html body .barra-principal {
   background: #425363; /*PANTONE 1545 C*/
   box-shadow: 0 18px 20px 0 rgba(0, 0, 0, 0.2);
@@ -189,9 +189,9 @@ html body #gkFooter {
     color: #ff8300;
   }
 }
-/**Willy Banff: barra principal END**/
+/*Willy Banff: barra principal END*/
 
-/**Willy Banff: footer modificado START**/
+/*Willy Banff: footer modificado START*/
 html body footer {
   display: flex;
   width: 100%;
@@ -365,4 +365,4 @@ html body footer .footer-content .footer-bottom span {
     padding-right: 130px;
   }
 }
-/**Willy Banff: footer modificado END**/
+/*Willy Banff: footer modificado END*/
