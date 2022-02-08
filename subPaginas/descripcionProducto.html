@@ -1204,6 +1204,757 @@
             background-image: url(https://www.banffbombas.cl/media/mod_social_slider/icons/icon.png);
         }
     </style>
+    <!--Willy Banff: styles general START-->
+    <style>
+        .mifondo .gkPage {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        body .sidebar {
+            display: none;
+        }
+
+        .mifondo .box1 {
+            width: 260px;
+            height: 100%;
+            z-index: 999;
+            background: #425363;
+        }
+
+        .box1 .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+        .box1 .category {
+            color: #fff;
+            background: #425363;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .box1 .textoCategory {
+            padding-left: 20px;
+        }
+
+        .mifondo .box1 .logo-details {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            align-items: left;
+            background: #425363;
+            filter: brightness(85%);
+
+
+        }
+
+        .mifondo .box1 .barra-busqueda {
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+
+        .mifondo .box1 .logo-details .logo-name {
+            font-size: 18px;
+            max-width: 200px;
+            font-weight: 600;
+            color: #fff;
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+
+
+        .box1 .nav-links {
+            height: 100%;
+            padding: 30px 0 150px 0;
+            overflow: auto;
+            background: #425363;
+
+
+        }
+
+        .box1 .nav-links li a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+
+        .box1 .nav-links li .iocn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            list-style: none;
+            transition: all 0.4s ease;
+
+        }
+
+        .box1 .nav-links li .iocn-link:hover {
+            background: #425363;
+            filter: brightness(85%);
+        }
+
+        .box1 .nav-links li i {
+            height: 50px;
+            min-width: 78px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+
+        .box1 .nav-links li .arrow3 {
+            cursor: pointer;
+        }
+
+        .box1 .nav-links li.showMenu i.arrow3 {
+            transform: rotate(-180deg);
+        }
+
+
+
+        .box1 .nav-links li .sub-menu {
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            word-break: normal;
+            margin-top: -10px;
+            background: #425363;
+            filter: brightness(85%);
+            display: none;
+
+        }
+
+        .box1 .nav-links li.showMenu .sub-menu {
+            display: block;
+
+        }
+
+        .box1 .nav-links li .sub-menu a {
+            color: #fff;
+            font-size: 12px;
+            padding: 5px 0px;
+            max-width: 20px;
+            white-space: nowrap;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+
+        }
+
+
+        .box1 .nav-links li .sub-menu a:hover {
+            opacity: 1;
+        }
+
+        .box1.close .link_name {
+            font-size: 18px;
+            opacity: 1;
+        }
+
+
+        @media only screen and (max-width: 1024px) {
+
+
+            .mifondo section .box1 {
+                display: none;
+            }
+
+            .mifondo .sidebar {
+                display: block;
+                position: fixed;
+                width: 260px;
+                height: 100%;
+                top: 40px;
+                z-index: 999;
+                background: #425363;
+
+                left: -260px;
+                transition: 0.3s;
+
+            }
+
+            .mifondo .sidebarVisible {
+                left: 0;
+            }
+
+            .sidebar .barra-label {
+                display: flex;
+                flex-direction: row-reverse;
+                background: #425363;
+                width: 400px;
+                height: 55px;
+                transition: 0.3s;
+            }
+
+            .sidebar.sidebarVisible .barra-label {
+                width: 305px;
+                filter: brightness(85%);
+            }
+
+            .sidebar .category {
+                color: #fff;
+                background: #425363;
+                display: flex;
+                align-items: center;
+
+            }
+
+            .sidebar .textoCategory {
+                padding-left: 20px;
+            }
+
+            .sidebar.sidebarVisible .textoCategory {
+                display: none;
+            }
+
+
+            .mifondo .sidebar .arrow1 {
+                color: #fff;
+                background: none;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+
+            .mifondo .sidebar .arrowVisible {
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+            }
+
+            .mifondo .sidebar .logo-details {
+                height: 100px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-top: 10px;
+                padding-bottom: 30px;
+                align-items: left;
+                background: #425363;
+                filter: brightness(85%);
+
+
+            }
+
+            .mifondo .sidebar .barra-busqueda {
+                padding-top: 5px;
+                padding-left: 20px;
+            }
+
+            .mifondo .sidebar .logo-details .logo-name {
+                font-size: 18px;
+                max-width: 200px;
+                font-weight: 600;
+                color: #fff;
+                padding-top: 5px;
+                padding-left: 20px;
+            }
+
+
+            .sidebar .nav-links {
+                height: 100%;
+                padding: 30px 0 150px 0;
+                overflow: auto;
+                background: #425363;
+
+
+            }
+
+
+
+            .sidebar .nav-links li a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #fff;
+            }
+
+
+            .sidebar .nav-links li .iocn-link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                list-style: none;
+                transition: all 0.4s ease;
+
+            }
+
+            .sidebar .nav-links li .iocn-link:hover {
+                background: #425363;
+                filter: brightness(85%);
+            }
+
+            .sidebar .nav-links li i {
+                height: 50px;
+                min-width: 78px;
+                text-align: center;
+                line-height: 50px;
+                color: #fff;
+                font-size: 20px;
+                transition: all 0.3s ease;
+            }
+
+            .sidebar .nav-links li.showMenu i.arrow {
+                transform: rotate(-180deg);
+            }
+
+
+
+            .sidebar .nav-links li .sub-menu {
+                padding-left: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                word-break: normal;
+                margin-top: -10px;
+                background: #425363;
+                filter: brightness(85%);
+                display: none;
+
+            }
+
+            .sidebar .nav-links li.showMenu .sub-menu {
+                display: block;
+
+            }
+
+            .sidebar .nav-links li .sub-menu a {
+                color: #fff;
+                font-size: 12px;
+                padding: 5px 0px;
+                max-width: 20px;
+                white-space: nowrap;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+
+            }
+
+
+            .sidebar .nav-links li .sub-menu a:hover {
+                opacity: 1;
+            }
+
+            .sidebar.close .link_name {
+                font-size: 18px;
+                opacity: 1;
+            }
+
+        }
+    </style>
+    <!--Willy Banff: styles general END-->
+
+    <!--Willy Banff: barra principal START-->
+    <style>
+        html body .barra-principal {
+            background: #425363;
+            /*PANTONE 1545 C*/
+            box-shadow: 0 18px 20px 0 rgba(0, 0, 0, .2);
+            display: flex;
+            width: 100%;
+            height: 45px;
+            position: fixed;
+            justify-content: center;
+            left: 0;
+            z-index: 9999;
+            top: -100%;
+        }
+
+        html body .barra-principal .gkMenu>ul li div.childcontent {
+            background-color: #425363;
+            top: 50px;
+        }
+
+        html body .barra-principal .gkMenu>ul>li>a {
+            line-height: 15px;
+            font-size: 12px;
+
+        }
+
+        html body .barra-principal .gkMenu>ul li div.childcontent a {
+            color: #fff;
+        }
+
+        html body .barra-principal ul li a {
+            color: #fff;
+        }
+
+        html body .barra-principal ul li a:hover {
+            color: #FF8300;
+        }
+
+        html body .barra-principal .gkMenu .haschild:hover>a,
+        .gkMenu li.haschild.active:hover>a {
+            color: #FF8300;
+        }
+
+        html body .barra-principal .gkMenu>ul li div.childcontent li:hover>a,
+        .gkMenu>ul li div.childcontent li:hover>a small {
+            color: #FF8300;
+        }
+
+        html body .barra-principal .gkMenu>ul>li.active>a {
+            color: #FF8300;
+        }
+
+        html body .barra-principal_visible {
+            top: 0;
+            transition: 0.3s;
+        }
+
+        /*Willy Banff: menu burguer*/
+        html body .burguer {
+            color: #425363;
+            background: none;
+            font-size: 22px;
+            padding: 0 16px;
+            line-height: 55px;
+            cursor: pointer;
+            display: none;
+
+            top: -8px;
+            left: 0px;
+            position: fixed;
+            z-index: 9999;
+        }
+
+        html body .nav-menu {
+            display: flex;
+            list-style: none;
+            z-index: 9999;
+            display: none;
+            overflow-x: hidden;
+
+        }
+
+        html body .nav-menu-item {
+            font-size: 12px;
+            margin: 0 8px;
+            line-height: 60px;
+            text-transform: uppercase;
+            width: max-content;
+
+        }
+
+        html body .nav-menu select {
+            font-size: 12px;
+            margin: 0 8px;
+            text-transform: uppercase;
+            background: transparent;
+            background-color: #425363;
+            border: none;
+            outline: 0px;
+            color: #fff;
+        }
+
+
+        html body .nav-menu select option {
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        html body .nav-menu-link {
+            padding: 6px 8px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        html body .nav-menu-link:hover {
+            background-color: #FF8300;
+            transition: 0.5s;
+        }
+
+        html body .barra-burguer {
+            position: fixed;
+            display: none;
+            width: 100%;
+            left: 0;
+            top: -1;
+            height: 41px;
+            background-color: #425363;
+            z-index: 9999;
+        }
+
+        html body .myfooter table tr td h3 {
+            padding-top: 5%;
+        }
+
+        html body #gkFooter {
+            background-color: #425363;
+            opacity: 100%;
+        }
+
+
+        @media only screen and (max-width: 1024px) {
+
+            /*Willy Banff: barra principal*/
+            html body .barra-principal {
+                display: none;
+            }
+
+
+            /*Willy Banff: menu burguer*/
+            html body .barra-burguer {
+                display: block;
+                left: 100%;
+                transition: 0.3s;
+
+            }
+
+            html body .burguerBlanco {
+                color: #fff;
+                transition: 0.3s;
+            }
+
+            html body .barra-burguer_visible {
+                left: 0%;
+            }
+
+
+            html body .burguer {
+                display: block;
+            }
+
+            html body .nav-menu {
+                flex-direction: column;
+                align-items: left;
+                margin: 0px;
+                background-color: #425363;
+                /*Pantone 7545 gris*/
+                position: fixed;
+                top: 40px;
+                max-width: 140px;
+                height: 100%;
+                display: block;
+
+                height: calc(100%-60px);
+                overflow-y: auto;
+
+                left: -100%;
+                transition: 0.3s;
+
+            }
+
+
+
+
+            html body .nav-menu_visible {
+                left: 0%;
+            }
+
+
+
+
+
+
+            html body .nav-menu-item {
+                line-height: 45px;
+            }
+
+            html body .nav-menu-link:hover {
+                background: none;
+                color: #FF8300;
+            }
+        }
+    </style>
+
+    <style>
+        html body footer {
+            display: flex;
+            width: 100%;
+            min-width: 350px;
+            background: #f5f5f7;
+            height: auto;
+            padding-top: 30px;
+            color: var(--footer-directory-title-color);
+        }
+
+        html body footer .footer-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        html body footer .footer-content h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 3rem;
+            text-align: center;
+            color: #425363;
+        }
+
+        html body footer .footer-content .footer-medio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        html body footer .footer-content .footer-info {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 10px;
+
+        }
+
+        html body footer .footer-content .footer-info .quienes-footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        html body footer .footer-content .footer-info .servicios-footer {
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        html body footer .footer-content .footer-info .contacto-footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        html body footer .footer-content .footer-info .servicios-footer a {
+            display: flex;
+            word-break: break-word;
+            margin: 10px auto;
+            padding-bottom: 10px;
+
+            line-height: 15px;
+            font-size: 12px;
+            color: #6e6e73;
+        }
+
+        html body footer .footer-content .footer-info .servicios-footer a:hover {
+            color: #FF8300;
+            transition: 0.3s;
+        }
+
+
+        html body footer .footer-content .footer-info h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+            padding-right: 50px;
+            text-transform: capitalize;
+            line-height: 2rem;
+            color: #425363;
+        }
+
+
+        html body footer .footer-content .footer-info p {
+            display: flex;
+            word-break: break-word;
+            margin: 10px auto;
+
+            max-width: 500px;
+
+            line-height: 15px;
+            font-size: 12px;
+            color: #6e6e73;
+        }
+
+        html body footer .footer-content .footer-medio .linea {
+            word-break: break-word;
+            height: 1px;
+            width: 100%;
+            background: #d2d2d7;
+        }
+
+        html body footer .footer-content .footer-info a {
+            color: #ff8400;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+
+        html body footer .footer-content .footer-bottom {
+            display: flex;
+            background: #f5f5f7;
+            width: 100%;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+
+
+        html body footer .footer-content .footer-bottom p {
+            float: left;
+            font-size: 10px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        html body footer .footer-content .footer-bottom p a {
+            color: #FF8300;
+            font-size: 10px;
+            text-decoration: none;
+        }
+
+        html body footer .footer-content .footer-bottom span {
+            text-transform: uppercase;
+            opacity: 0.4;
+            font-weight: 200;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            html body footer .footer-content h1 {
+                text-align: left;
+                padding-left: 30px;
+                padding-right: 50px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                line-height: 0px;
+            }
+
+
+
+            html body footer .footer-content .footer-medio .footer-info {
+                flex-direction: column;
+            }
+
+            html body footer .footer-content .footer-medio {
+                padding-left: 30px;
+                padding-right: 50px;
+                padding-bottom: 0px;
+                padding-top: 20px;
+            }
+
+            html body footer .footer-content .footer-medio .footer-info .servicios-footer {
+                padding: 0;
+            }
+
+            html body footer .footer-content .footer-medio .footer-info .quienes-footer {
+                padding-top: 0px;
+                padding-bottom: 30px;
+            }
+
+            html body footer .footer-content .footer-bottom p{
+                padding-left: 30px;
+            }
+
+        }
+
+        @media only screen and (min-width: 768px) {
+            html body footer .footer-content {
+                padding-left: 130px;
+                padding-right: 130px;
+            }
+        }
+    </style>
+
+
     <script
         src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.es_419.63PgX-Kp0o0.O/m=auth/exm=plus,plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCO75c3W-w27SfLThvvzwjgBgEIiLg/cb=gapi.loaded_1?le=oz"
         async=""></script>
@@ -1369,358 +2120,7 @@
 
 <script src="https://kit.fontawesome.com/37be89b3d2.js" crossorigin="anonymous"></script>
 
-<!--Willy Banff: styles general START-->
-<style>
-    .mifondo .gkPage {
-        display: flex;
-        flex-direction: row-reverse;
-    }
 
-    body .sidebar {
-        display: none;
-    }
-
-    .mifondo .box1 {
-        width: 260px;
-        height: 100%;
-        z-index: 999;
-        background: #425363;
-    }
-
-    .box1 .nav-links::-webkit-scrollbar {
-        display: none;
-    }
-
-    .box1 .category {
-        color: #fff;
-        background: #425363;
-        display: flex;
-        align-items: center;
-
-    }
-
-    .box1 .textoCategory {
-        padding-left: 20px;
-    }
-
-    .mifondo .box1 .logo-details {
-        height: 100px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top: 10px;
-        padding-bottom: 30px;
-        align-items: left;
-        background: #425363;
-        filter: brightness(85%);
-
-
-    }
-
-    .mifondo .box1 .barra-busqueda {
-        padding-top: 5px;
-        padding-left: 20px;
-    }
-
-    .mifondo .box1 .logo-details .logo-name {
-        font-size: 18px;
-        max-width: 200px;
-        font-weight: 600;
-        color: #fff;
-        padding-top: 5px;
-        padding-left: 20px;
-    }
-
-
-    .box1 .nav-links {
-        height: 100%;
-        padding: 30px 0 150px 0;
-        overflow: auto;
-        background: #425363;
-
-
-    }
-
-    .box1 .nav-links li a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: #fff;
-    }
-
-
-    .box1 .nav-links li .iocn-link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        list-style: none;
-        transition: all 0.4s ease;
-
-    }
-
-    .box1 .nav-links li .iocn-link:hover {
-        background: #425363;
-        filter: brightness(85%);
-    }
-
-    .box1 .nav-links li i {
-        height: 50px;
-        min-width: 78px;
-        text-align: center;
-        line-height: 50px;
-        color: #fff;
-        font-size: 20px;
-        transition: all 0.3s ease;
-    }
-
-
-    .box1 .nav-links li .arrow3 {
-        cursor: pointer;
-    }
-
-    .box1 .nav-links li.showMenu i.arrow3 {
-        transform: rotate(-180deg);
-    }
-
-
-
-    .box1 .nav-links li .sub-menu {
-        padding-left: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        word-break: normal;
-        margin-top: -10px;
-        background: #425363;
-        filter: brightness(85%);
-        display: none;
-
-    }
-
-    .box1 .nav-links li.showMenu .sub-menu {
-        display: block;
-
-    }
-
-    .box1 .nav-links li .sub-menu a {
-        color: #fff;
-        font-size: 12px;
-        padding: 5px 0px;
-        max-width: 20px;
-        white-space: nowrap;
-        opacity: 0.6;
-        transition: all 0.3s ease;
-
-    }
-
-
-    .box1 .nav-links li .sub-menu a:hover {
-        opacity: 1;
-    }
-
-    .box1.close .link_name {
-        font-size: 18px;
-        opacity: 1;
-    }
-
-
-    @media only screen and (max-width: 1024px) {
-
-
-        .mifondo section .box1 {
-            display: none;
-        }
-
-        .mifondo .sidebar {
-            display: block;
-            position: fixed;
-            width: 260px;
-            height: 100%;
-            top: 40px;
-            z-index: 999;
-            background: #425363;
-
-            left: -260px;
-            transition: 0.3s;
-
-        }
-
-        .mifondo .sidebarVisible {
-            left: 0;
-        }
-
-        .sidebar .barra-label {
-            display: flex;
-            flex-direction: row-reverse;
-            background: #425363;
-            width: 400px;
-            height: 55px;
-            transition: 0.3s;
-        }
-
-        .sidebar.sidebarVisible .barra-label {
-            width: 305px;
-            filter: brightness(85%);
-        }
-
-        .sidebar .category {
-            color: #fff;
-            background: #425363;
-            display: flex;
-            align-items: center;
-
-        }
-
-        .sidebar .textoCategory {
-            padding-left: 20px;
-        }
-
-        .sidebar.sidebarVisible .textoCategory {
-            display: none;
-        }
-
-
-        .mifondo .sidebar .arrow1 {
-            color: #fff;
-            background: none;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-
-
-        .mifondo .sidebar .arrowVisible {
-            transform: rotate(180deg);
-            transition: all 0.3s ease;
-        }
-
-        .mifondo .sidebar .logo-details {
-            height: 100px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding-top: 10px;
-            padding-bottom: 30px;
-            align-items: left;
-            background: #425363;
-            filter: brightness(85%);
-
-
-        }
-
-        .mifondo .sidebar .barra-busqueda {
-            padding-top: 5px;
-            padding-left: 20px;
-        }
-
-        .mifondo .sidebar .logo-details .logo-name {
-            font-size: 18px;
-            max-width: 200px;
-            font-weight: 600;
-            color: #fff;
-            padding-top: 5px;
-            padding-left: 20px;
-        }
-
-
-        .sidebar .nav-links {
-            height: 100%;
-            padding: 30px 0 150px 0;
-            overflow: auto;
-            background: #425363;
-
-
-        }
-
-
-
-        .sidebar .nav-links li a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            color: #fff;
-        }
-
-
-        .sidebar .nav-links li .iocn-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            list-style: none;
-            transition: all 0.4s ease;
-
-        }
-
-        .sidebar .nav-links li .iocn-link:hover {
-            background: #425363;
-            filter: brightness(85%);
-        }
-
-        .sidebar .nav-links li i {
-            height: 50px;
-            min-width: 78px;
-            text-align: center;
-            line-height: 50px;
-            color: #fff;
-            font-size: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .sidebar .nav-links li.showMenu i.arrow {
-            transform: rotate(-180deg);
-        }
-
-
-
-        .sidebar .nav-links li .sub-menu {
-            padding-left: 30px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            word-break: normal;
-            margin-top: -10px;
-            background: #425363;
-            filter: brightness(85%);
-            display: none;
-
-        }
-
-        .sidebar .nav-links li.showMenu .sub-menu {
-            display: block;
-
-        }
-
-        .sidebar .nav-links li .sub-menu a {
-            color: #fff;
-            font-size: 12px;
-            padding: 5px 0px;
-            max-width: 20px;
-            white-space: nowrap;
-            opacity: 0.6;
-            transition: all 0.3s ease;
-
-        }
-
-
-        .sidebar .nav-links li .sub-menu a:hover {
-            opacity: 1;
-        }
-
-        .sidebar.close .link_name {
-            font-size: 18px;
-            opacity: 1;
-        }
-
-    }
-</style>
-<!--Willy Banff: styles general END-->
 
 <body id="productos" data-tablet-width="1024" data-mobile-width="580" style="background: #fff;">
     <div id="gkMainWrap">
@@ -1732,219 +2132,6 @@
                     </a>
                 </h2>
 
-                <!--Willy Banff: barra principal START-->
-                <style>
-                    html body .barra-principal {
-                        background: #425363;
-                        /*PANTONE 1545 C*/
-                        box-shadow: 0 18px 20px 0 rgba(0, 0, 0, .2);
-                        display: flex;
-                        width: 100%;
-                        height: 45px;
-                        position: fixed;
-                        justify-content: center;
-                        left: 0;
-                        z-index: 9999;
-                        top: -100%;
-                    }
-
-                    html body .barra-principal .gkMenu>ul li div.childcontent {
-                        background-color: #425363;
-                        top: 50px;
-                    }
-
-                    html body .barra-principal .gkMenu>ul>li>a {
-                        line-height: 15px;
-                        font-size: 12px;
-
-                    }
-
-                    html body .barra-principal .gkMenu>ul li div.childcontent a {
-                        color: #fff;
-                    }
-
-                    html body .barra-principal ul li a {
-                        color: #fff;
-                    }
-
-                    html body .barra-principal ul li a:hover {
-                        color: #FF8300;
-                    }
-
-                    html body .barra-principal .gkMenu .haschild:hover>a,
-                    .gkMenu li.haschild.active:hover>a {
-                        color: #FF8300;
-                    }
-
-                    html body .barra-principal .gkMenu>ul li div.childcontent li:hover>a,
-                    .gkMenu>ul li div.childcontent li:hover>a small {
-                        color: #FF8300;
-                    }
-
-                    html body .barra-principal .gkMenu>ul>li.active>a {
-                        color: #FF8300;
-                    }
-
-                    html body .barra-principal_visible {
-                        top: 0;
-                        transition: 0.3s;
-                    }
-
-                    /*Willy Banff: menu burguer*/
-                    html body .burguer {
-                        color: #425363;
-                        background: none;
-                        font-size: 22px;
-                        padding: 0 16px;
-                        line-height: 55px;
-                        cursor: pointer;
-                        display: none;
-
-                        top: -8px;
-                        left: 0px;
-                        position: fixed;
-                        z-index: 9999;
-                    }
-
-                    html body .nav-menu {
-                        display: flex;
-                        list-style: none;
-                        z-index: 9999;
-                        display: none;
-                        overflow-x: hidden;
-
-                    }
-
-                    html body .nav-menu-item {
-                        font-size: 12px;
-                        margin: 0 8px;
-                        line-height: 60px;
-                        text-transform: uppercase;
-                        width: max-content;
-
-                    }
-
-                    html body .nav-menu select {
-                        font-size: 12px;
-                        margin: 0 8px;
-                        text-transform: uppercase;
-                        background: transparent;
-                        background-color: #425363;
-                        border: none;
-                        outline: 0px;
-                        color: #fff;
-                    }
-
-
-                    html body .nav-menu select option {
-                        font-size: 10px;
-                        text-transform: uppercase;
-                    }
-
-                    html body .nav-menu-link {
-                        padding: 6px 8px;
-                        border-radius: 5px;
-                        color: #fff;
-                    }
-
-                    html body .nav-menu-link:hover {
-                        background-color: #FF8300;
-                        transition: 0.5s;
-                    }
-
-                    html body .barra-burguer {
-                        position: fixed;
-                        display: none;
-                        width: 100%;
-                        left: 0;
-                        top: -1;
-                        height: 41px;
-                        background-color: #425363;
-                        z-index: 9999;
-                    }
-
-                    html body .myfooter table tr td h3 {
-                        padding-top: 5%;
-                    }
-
-                    html body #gkFooter {
-                        background-color: #425363;
-                        opacity: 100%;
-                    }
-
-
-                    @media only screen and (max-width: 1024px) {
-
-                        /*Willy Banff: barra principal*/
-                        html body .barra-principal {
-                            display: none;
-                        }
-
-
-                        /*Willy Banff: menu burguer*/
-                        html body .barra-burguer {
-                            display: block;
-                            left: 100%;
-                            transition: 0.3s;
-
-                        }
-
-                        html body .burguerBlanco {
-                            color: #fff;
-                            transition: 0.3s;
-                        }
-
-                        html body .barra-burguer_visible {
-                            left: 0%;
-                        }
-
-
-                        html body .burguer {
-                            display: block;
-                        }
-
-                        html body .nav-menu {
-                            flex-direction: column;
-                            align-items: left;
-                            margin: 0px;
-                            background-color: #425363;
-                            /*Pantone 7545 gris*/
-                            position: fixed;
-                            top: 40px;
-                            max-width: 140px;
-                            height: 100%;
-                            display: block;
-
-                            height: calc(100%-60px);
-                            overflow-y: auto;
-
-                            left: -100%;
-                            transition: 0.3s;
-
-                        }
-
-
-
-
-                        html body .nav-menu_visible {
-                            left: 0%;
-                        }
-
-
-
-
-
-
-                        html body .nav-menu-item {
-                            line-height: 45px;
-                        }
-
-                        html body .nav-menu-link:hover {
-                            background: none;
-                            color: #FF8300;
-                        }
-                    }
-                </style>
 
                 <div class="barra-burguer">
                     <button class="burguer" aria-label="Abrir menú">
@@ -2903,7 +3090,8 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Longitud de carrera</td>
-                                                                    <td>ajustable manualmente o mediante actuador eléctrico</td>
+                                                                    <td>ajustable manualmente o mediante actuador
+                                                                        eléctrico</td>
                                                                 </tr>
                                                                 <tr style="background: rgba(128, 128, 128, 0.082);">
                                                                     <td>Compatibilidad actuador eléctrico</td>
@@ -2911,7 +3099,8 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Configuración del Reglamento (CE) 1935/2004</td>
-                                                                    <td>Materiales y objetos destinados a entrar en contacto con alimentos</td>
+                                                                    <td>Materiales y objetos destinados a entrar en
+                                                                        contacto con alimentos</td>
                                                                 </tr>
                                                                 <tr style="background: rgba(128, 128, 128, 0.082);">
                                                                     <td>Ancho (cm)</td>
@@ -3436,188 +3625,6 @@
         <!--Willy Banff: footer modificado START-->
         <div class="footer-willy" style="padding-top: 5px;">
 
-            <style>
-                html body footer {
-                    display: flex;
-                    width: 100%;
-                    min-width: 350px;
-                    background: #f5f5f7;
-                    height: auto;
-                    padding-top: 30px;
-                    color: var(--footer-directory-title-color);
-                }
-
-                html body footer .footer-content {
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                html body footer .footer-content h1 {
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                    text-transform: capitalize;
-                    line-height: 3rem;
-                    text-align: center;
-                    color: #425363;
-                }
-
-                html body footer .footer-content .footer-medio {
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                html body footer .footer-content .footer-info {
-                    display: flex;
-                    flex-direction: row;
-                    padding-bottom: 10px;
-
-                }
-
-                html body footer .footer-content .footer-info .quienes-footer {
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                }
-
-                html body footer .footer-content .footer-info .servicios-footer {
-                    padding-left: 40px;
-                    padding-right: 40px;
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                }
-
-                html body footer .footer-content .footer-info .contacto-footer {
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                }
-
-                html body footer .footer-content .footer-info .servicios-footer a {
-                    display: flex;
-                    word-break: break-word;
-                    margin: 10px auto;
-                    padding-bottom: 10px;
-
-                    line-height: 15px;
-                    font-size: 12px;
-                    color: #6e6e73;
-                }
-
-                html body footer .footer-content .footer-info .servicios-footer a:hover {
-                    color: #FF8300;
-                    transition: 0.3s;
-                }
-
-
-                html body footer .footer-content .footer-info h2 {
-                    font-size: 1rem;
-                    font-weight: 500;
-                    text-align: left;
-                    padding-right: 50px;
-                    text-transform: capitalize;
-                    line-height: 2rem;
-                    color: #425363;
-                }
-
-
-                html body footer .footer-content .footer-info p {
-                    display: flex;
-                    word-break: break-word;
-                    margin: 10px auto;
-
-                    max-width: 500px;
-
-                    line-height: 15px;
-                    font-size: 12px;
-                    color: #6e6e73;
-                }
-
-                html body footer .footer-content .footer-medio .linea {
-                    word-break: break-word;
-                    height: 1px;
-                    width: 100%;
-                    background: #d2d2d7;
-                }
-
-                html body footer .footer-content .footer-info a {
-                    color: #ff8400;
-                    font-size: 12px;
-                    text-decoration: none;
-                }
-
-
-                html body footer .footer-content .footer-bottom {
-                    display: flex;
-                    background: #f5f5f7;
-                    width: 100%;
-                    text-align: left;
-                    padding-bottom: 15px;
-                }
-
-
-                html body footer .footer-content .footer-bottom p {
-                    float: left;
-                    font-size: 10px;
-                    word-spacing: 2px;
-                    text-transform: capitalize;
-                }
-
-                html body footer .footer-content .footer-bottom p a {
-                    color: #FF8300;
-                    font-size: 10px;
-                    text-decoration: none;
-                }
-
-                html body footer .footer-content .footer-bottom span {
-                    text-transform: uppercase;
-                    opacity: 0.4;
-                    font-weight: 200;
-                }
-
-                @media only screen and (max-width: 768px) {
-
-                    html body footer .footer-content h1 {
-                        text-align: left;
-                        padding-left: 30px;
-                        padding-right: 50px;
-                        padding-bottom: 10px;
-                        padding-top: 10px;
-                        line-height: 0px;
-                    }
-
-
-
-                    html body footer .footer-content .footer-medio .footer-info {
-                        flex-direction: column;
-                    }
-
-                    html body footer .footer-content .footer-medio {
-                        padding-left: 30px;
-                        padding-right: 50px;
-                        padding-bottom: 0px;
-                        padding-top: 20px;
-                    }
-
-                    html body footer .footer-content .footer-medio .footer-info .servicios-footer {
-                        padding: 0;
-                    }
-
-                    html body footer .footer-content .footer-medio .footer-info .quienes-footer {
-                        padding-top: 0px;
-                        padding-bottom: 30px;
-                    }
-
-                    html body footer .footer-content .footer-bottom {
-                        padding-left: 30px;
-                    }
-
-                }
-
-                @media only screen and (min-width: 768px) {
-                    html body footer .footer-content {
-                        padding-left: 130px;
-                        padding-right: 130px;
-                    }
-                }
-            </style>
 
             <footer>
                 <div class="footer-content">
@@ -3682,6 +3689,37 @@
         </div>
         <!--Willy Banff: footer modificado END-->
 
+
+
+        <!-- +1 button -->
+
+        <script type="text/javascript">
+            window.___gcfg = { lang: "en-GB" };
+            (function () {
+                var po = document.createElement("script");
+                po.type = "text/javascript";
+                po.async = true;
+                po.src = "https://apis.google.com/js/plusone.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+
+        <!-- twitter -->
+
+        <!-- Pinterest script -->
+
+        <a id="scrollToTop" title="" class="scrollToTop" style="visibility: hidden; opacity: 0"><img
+                src="/images/top1.png" alt="" /></a>
+        <div id="sbox-overlay" aria-hidden="true" tabindex="-1" style="z-index: 65555; opacity: 0"></div>
+        <div id="sbox-window" role="dialog" aria-hidden="true" class="shadow" style="z-index: 65557">
+            <div id="sbox-content" style="opacity: 0"></div>
+            <a id="sbox-btn-close" href="#" role="button" aria-controls="sbox-window"></a>
+        </div>
+        <iframe name="oauth2relay734692384" id="oauth2relay734692384"
+            src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fwww.banffbombas.cl&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.es_419.63PgX-Kp0o0.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCO75c3W-w27SfLThvvzwjgBgEIiLg%2Fm%3D__features__#rpctoken=868289848&amp;forcesecure=1"
+            tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px">
+        </iframe>
         <!--Willy Banff: funciones usadas START-->
         <script type="text/javascript">
 
@@ -3732,35 +3770,6 @@
 
         </script>
         <!--Willy Banff: funciones usadas END-->
-
-        <!-- +1 button -->
-
-        <script type="text/javascript">
-            window.___gcfg = { lang: "en-GB" };
-            (function () {
-                var po = document.createElement("script");
-                po.type = "text/javascript";
-                po.async = true;
-                po.src = "https://apis.google.com/js/plusone.js";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(po, s);
-            })();
-        </script>
-
-        <!-- twitter -->
-
-        <!-- Pinterest script -->
-
-        <a id="scrollToTop" title="" class="scrollToTop" style="visibility: hidden; opacity: 0"><img
-                src="/images/top1.png" alt="" /></a>
-        <div id="sbox-overlay" aria-hidden="true" tabindex="-1" style="z-index: 65555; opacity: 0"></div>
-        <div id="sbox-window" role="dialog" aria-hidden="true" class="shadow" style="z-index: 65557">
-            <div id="sbox-content" style="opacity: 0"></div>
-            <a id="sbox-btn-close" href="#" role="button" aria-controls="sbox-window"></a>
-        </div>
-        <iframe name="oauth2relay734692384" id="oauth2relay734692384"
-            src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fwww.banffbombas.cl&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.es_419.63PgX-Kp0o0.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCO75c3W-w27SfLThvvzwjgBgEIiLg%2Fm%3D__features__#rpctoken=868289848&amp;forcesecure=1"
-            tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px"></iframe>
 </body>
 
 </html>
